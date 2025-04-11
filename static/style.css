@@ -163,3 +163,27 @@ h2 {
 #popup-score.bump {
     animation: bump 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 2.125rem;
+    background-color: #ccc;
+}
+
+nav>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav button {
+    background-color: #555;
+    color: white;
+    border: 0;
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+

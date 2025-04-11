@@ -3,6 +3,7 @@ import sqlite3
 import hashlib
 import os
 from dotenv import load_dotenv
+import secrets
 
 load_dotenv()  # Load environment variables from .env
 
@@ -25,12 +26,14 @@ def home():
 def register():
     if request.method == "POST":
         username = request.form["username"]
-        password = hashlib.sha256(request.form["password"].encode()).hexdigest()
+        salt = secrets.token_urlsafe(32) 
+        password = hashlib.sha256((request.form["password"] + salt).encode()).hexdigest()
         db = get_db()
         try:
-            db.execute("INSERT INTO users (username, password) VALUES (?, ?)", (username, password))
+            db.execute("INSERT INTO users (username, password, salt) VALUES (?, ?, ?)", (username, password, salt))
             db.commit()
-        except:
+        except Exception as e:
+            print(e)
             return "Username taken"
         return redirect("/login")
     return render_template("register.html")
@@ -39,13 +42,14 @@ def register():
 def login():
     if request.method == "POST":
         username = request.form["username"]
-        password = hashlib.sha256(request.form["password"].encode()).hexdigest()
         db = get_db()
-        user = db.execute("SELECT * FROM users WHERE username=? AND password=?", (username, password)).fetchone()
-        if user:
-            session["user_id"] = user["id"]
-            return redirect("/dashboard")
-        return "Invalid credentials"
+        user = db.execute("SELECT * FROM users WHERE username=?", (username)).fetchone()
+        if not user or hashlib.sha256((request.form["password"] + user["salt"]).encode()).hexdigest() != user["password"]:
+            # If username doesn't exist or hash(inputted password + salt) is not the given password hash, then return
+            return "Invalid credentials"
+        session["user_id"] = user["id"]
+        return redirect("/dashboard")
+        
     return render_template("login.html")
 
 def get_all_noi_years(problems_by_category):

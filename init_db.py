@@ -11,8 +11,10 @@ c = conn.cursor()
 c.execute('''CREATE TABLE users (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT UNIQUE NOT NULL,
-    password TEXT NOT NULL
+    password TEXT NOT NULL,
+    salt TEXT NOT NULL
 )''')
+
 
 c.execute('''CREATE TABLE problems (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
