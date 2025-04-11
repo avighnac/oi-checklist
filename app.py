@@ -43,7 +43,7 @@ def login():
     if request.method == "POST":
         username = request.form["username"]
         db = get_db()
-        user = db.execute("SELECT * FROM users WHERE username=?", (username)).fetchone()
+        user = db.execute("SELECT * FROM users WHERE username=?", (username,)).fetchone()
         if not user or hashlib.sha256((request.form["password"] + user["salt"]).encode()).hexdigest() != user["password"]:
             # If username doesn't exist or hash(inputted password + salt) is not the given password hash, then return
             return "Invalid credentials"

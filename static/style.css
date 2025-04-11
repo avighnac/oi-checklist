@@ -169,8 +169,12 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 2.125rem;
-    background-color: #ccc;
+    font-size: 1.075rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #ccc;   
+    top: 0;
+    left:0;
+    width: 100%;
 }
 
 nav>div {
@@ -184,6 +188,6 @@ nav button {
     color: white;
     border: 0;
     padding: 2rem;
-    font-size: 1.5rem;
+    font-size: 0.75rem;
 }
 
