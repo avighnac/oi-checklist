@@ -208,10 +208,10 @@ def discord_unlink():
         """
         SELECT 
             (SELECT COUNT(*) FROM auth_identities WHERE user_id = ?) +
-            (SELECT CASE WHEN password IS NOT NULL THEN 1 ELSE 0 END FROM users WHERE id = ?)
+            (SELECT CASE WHEN password IS NOT NULL THEN 1 ELSE 0 END FROM users WHERE id = ?) AS total_count
         """,
         (request.user_id, request.user_id),
-    ).fetchone()[0]
+    ).fetchone()['total_count']
     if linked_count <= 1:
         return jsonify({"error": "You cannot unlink Discord as it's your only login method!"}), 400
 

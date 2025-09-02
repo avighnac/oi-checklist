@@ -54,7 +54,7 @@ def _get_db_token(db) -> str | None:
         "SELECT token FROM scraper_auth_tokens WHERE platform = ? ORDER BY rowid DESC LIMIT 1",
         ("qoj.ac",),
     ).fetchone()
-    return row["token"] if row and hasattr(row, "keys") and "token" in row.keys() else (row[0] if row else None)
+    return row["token"] if row else None
 
 def _save_db_token(db, token: str) -> None:
     # replace any existing token row(s) for qoj.ac with the new one
