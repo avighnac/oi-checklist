@@ -153,6 +153,21 @@ If you have existing SQLite data to migrate:
 python3 backend/database/migrate_sqlite_to_postgres.py --sqlite database.db --postgres "postgresql://user@localhost/oi_checklist"
 ```
 
+**Migration Options:**
+```bash
+# Preview what would be migrated (no database connection required)
+python3 backend/database/migrate_sqlite_to_postgres.py --sqlite database.db --postgres "postgresql://user@localhost/oi_checklist" --dry-run
+
+# Verify completed migration
+python3 backend/database/migrate_sqlite_to_postgres.py --sqlite database.db --postgres "postgresql://user@localhost/oi_checklist" --verify
+```
+
+**Test the migration:**
+```bash
+# Create test database with dummy data for all 15 tables
+python3 backend/database/test_migration.py --test-db test.db --postgres-url "postgresql://user@localhost/test_oi_checklist"
+```
+
 ### Using External Tools
 
 **pgloader** (alternative method):

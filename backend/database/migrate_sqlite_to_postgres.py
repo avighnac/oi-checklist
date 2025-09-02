@@ -63,16 +63,22 @@ def connect_postgres(database_url: str) -> psycopg2.extensions.connection:
 def get_table_columns(cursor, table_name: str, is_postgres: bool = False) -> List[str]:
     """Get column names for a table"""
     if is_postgres:
-        cursor.execute("""
-            SELECT column_name 
-            FROM information_schema.columns 
-            WHERE table_name = %s 
-            ORDER BY ordinal_position
-        """, (table_name,))
-        return [row[0] for row in cursor.fetchall()]
+        try:
+            cursor.execute("""
+                SELECT column_name 
+                FROM information_schema.columns 
+                WHERE table_name = %s 
+                ORDER BY ordinal_position
+            """, (table_name,))
+            return [row[0] for row in cursor.fetchall()]
+        except psycopg2.Error:
+            return []
     else:
-        cursor.execute(f"PRAGMA table_info({table_name})")
-        return [row[1] for row in cursor.fetchall()]
+        try:
+            cursor.execute(f"PRAGMA table_info({table_name})")
+            return [row[1] for row in cursor.fetchall()]
+        except sqlite3.OperationalError:
+            return []
 
 def get_table_data(sqlite_cursor, table_name: str) -> List[Dict[str, Any]]:
     """Get all data from SQLite table"""
@@ -248,6 +254,22 @@ def main():
             success = verify_migration(sqlite_cursor, pg_cursor)
             print(f"\nVerification {'PASSED' if success else 'FAILED'}")
             return 0 if success else 1
+        
+    try:
+        if args.verify:
+            # Only verify migration
+            success = verify_migration(sqlite_cursor, pg_cursor)
+            print(f"\nVerification {'PASSED' if success else 'FAILED'}")
+            return 0 if success else 1
+        
+        # Check if PostgreSQL schema is initialized
+        pg_cursor.execute("SELECT COUNT(*) FROM information_schema.tables WHERE table_schema = 'public'")
+        table_count = pg_cursor.fetchone()[0]
+        if table_count < len(MIGRATION_ORDER):
+            print(f"\nWarning: PostgreSQL database appears to be missing tables ({table_count}/{len(MIGRATION_ORDER)} found)")
+            print("Please run 'python3 backend/database/init/init_db.py' first to initialize the schema")
+            print("Then run this migration script again")
+            return 1
         
         # Perform migration
         print(f"\nStarting migration of {len(MIGRATION_ORDER)} tables...")
