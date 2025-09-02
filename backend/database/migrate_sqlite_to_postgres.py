@@ -3,7 +3,6 @@
 SQLite to PostgreSQL Migration Script
 
 This script migrates all data from an existing SQLite database to PostgreSQL.
-It handles all 15 tables in the oi-checklist application.
 
 Usage:
     python3 migrate_sqlite_to_postgres.py --sqlite database.db --postgres "postgresql://user@localhost/oi_checklist"
@@ -17,7 +16,6 @@ Prerequisites:
 import argparse
 import sqlite3
 import psycopg2
-from psycopg2.extras import RealDictCursor
 import sys
 import os
 from typing import Dict, List, Tuple, Any
@@ -46,7 +44,6 @@ def connect_sqlite(db_path: str) -> sqlite3.Connection:
     """Connect to SQLite database"""
     if not os.path.exists(db_path):
         raise FileNotFoundError(f"SQLite database not found: {db_path}")
-    
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
@@ -54,8 +51,8 @@ def connect_sqlite(db_path: str) -> sqlite3.Connection:
 def connect_postgres(database_url: str) -> psycopg2.extensions.connection:
     """Connect to PostgreSQL database"""
     try:
+        # Use default cursor (tuple rows) so row[0] indexing works everywhere
         conn = psycopg2.connect(database_url)
-        conn.cursor_factory = RealDictCursor
         return conn
     except psycopg2.OperationalError as e:
         raise ConnectionError(f"Could not connect to PostgreSQL: {e}")
@@ -103,7 +100,6 @@ def convert_value(value: Any, column_name: str) -> Any:
     if column_name.endswith('_at') or column_name.endswith('_time'):
         if isinstance(value, str):
             try:
-                # Try to parse and reformat timestamp
                 dt = datetime.fromisoformat(value.replace('Z', '+00:00'))
                 return dt.isoformat()
             except:
@@ -181,7 +177,6 @@ def reset_sequences(pg_cursor):
     """Reset PostgreSQL sequences to correct values after data import"""
     print("\nResetting PostgreSQL sequences...")
     
-    # Tables with SERIAL primary keys that need sequence resets
     serial_tables = [
         'users', 'auth_identities', 'problems', 'problem_links'
     ]
@@ -204,7 +199,6 @@ def verify_migration(sqlite_cursor, pg_cursor) -> bool:
     all_match = True
     for table_name in MIGRATION_ORDER:
         try:
-            # Count rows in both databases
             sqlite_cursor.execute(f"SELECT COUNT(*) FROM {table_name}")
             sqlite_count = sqlite_cursor.fetchone()[0]
             
@@ -250,14 +244,6 @@ def main():
     
     try:
         if args.verify:
-            # Only verify migration
-            success = verify_migration(sqlite_cursor, pg_cursor)
-            print(f"\nVerification {'PASSED' if success else 'FAILED'}")
-            return 0 if success else 1
-        
-    try:
-        if args.verify:
-            # Only verify migration
             success = verify_migration(sqlite_cursor, pg_cursor)
             print(f"\nVerification {'PASSED' if success else 'FAILED'}")
             return 0 if success else 1
@@ -307,8 +293,7 @@ def main():
         
     finally:
         sqlite_conn.close()
-        if not args.dry_run:
-            pg_conn.close()
+        pg_conn.close()
 
 if __name__ == '__main__':
     sys.exit(main())

@@ -154,6 +154,17 @@ def normalize_extra(val) -> str | None:
     # Any non-string 'extra' is unexpected; treat as stringified
     return str(val)
 
+# Helpers for SQL differences
+PH5 = "(%s, %s, %s, %s, %s)" if is_postgres else "(?, ?, ?, ?, ?)"
+PH4 = "(%s, %s, %s, %s)" if is_postgres else "(?, ?, ?, ?)"
+PH3 = "(%s, %s, %s)" if is_postgres else "(?, ?, ?)"
+
+insert_link_sql = (
+    f"INSERT INTO problem_links (problem_id, platform, url) VALUES {PH3} ON CONFLICT DO NOTHING"
+    if is_postgres
+    else f"INSERT OR IGNORE INTO problem_links (problem_id, platform, url) VALUES {PH3}"
+)
+
 # Atomic wipe & repopulate
 cur.execute("BEGIN;")
 try:
@@ -178,22 +189,45 @@ try:
         links = normalize_links(p)
 
         if "number" in p:
-            cur.execute(
-                """
-                INSERT INTO problems (name, number, source, year, extra)
-                VALUES (?, ?, ?, ?, ?)
-                """,
-                (p["name"], p["number"], p["source"], p["year"], extra),
-            )
+            if is_postgres:
+                cur.execute(
+                    f"""
+                    INSERT INTO problems (name, number, source, year, extra)
+                    VALUES {PH5}
+                    RETURNING id
+                    """,
+                    (p["name"], p["number"], p["source"], p["year"], extra),
+                )
+                problem_id = cur.fetchone()["id"]
+            else:
+                cur.execute(
+                    f"""
+                    INSERT INTO problems (name, number, source, year, extra)
+                    VALUES {PH5}
+                    """,
+                    (p["name"], p["number"], p["source"], p["year"], extra),
+                )
+                problem_id = cur.lastrowid
         else:
-            cur.execute(
-                """
-                INSERT INTO problems (name, source, year, extra)
-                VALUES (?, ?, ?, ?)
-                """,
-                (p["name"], p["source"], p["year"], extra),
-            )
-        problem_id = cur.lastrowid
+            if is_postgres:
+                cur.execute(
+                    f"""
+                    INSERT INTO problems (name, source, year, extra)
+                    VALUES {PH4}
+                    RETURNING id
+                    """,
+                    (p["name"], p["source"], p["year"], extra),
+                )
+                problem_id = cur.fetchone()["id"]
+            else:
+                cur.execute(
+                    f"""
+                    INSERT INTO problems (name, source, year, extra)
+                    VALUES {PH4}
+                    """,
+                    (p["name"], p["source"], p["year"], extra),
+                )
+                problem_id = cur.lastrowid
 
         # Insert problem_links (URLs already normalized to https)
         for link in links:
@@ -202,10 +236,7 @@ try:
             if not url:
                 continue
             cur.execute(
-                """
-                INSERT OR IGNORE INTO problem_links (problem_id, platform, url)
-                VALUES (?, ?, ?)
-                """,
+                insert_link_sql,
                 (problem_id, plat, url),
             )
 

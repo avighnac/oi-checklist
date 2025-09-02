@@ -1,6 +1,6 @@
 # PostgreSQL Setup Guide
 
-The oi-checklist application supports both PostgreSQL and SQLite databases, with automatic detection based on environment variables.
+oi-checklist supports both PostgreSQL and SQLite databases, with automatic detection based on environment variables.
 
 ## Database Configuration
 
@@ -188,31 +188,6 @@ The application includes `psycopg2-binary` for PostgreSQL support. Install depen
 pip install -r backend/requirements.txt
 ```
 
-## Database Features
-
-- ✅ **Cross-database compatibility**: Same application code works with both databases
-- ✅ **UPSERT operations**: `ON CONFLICT ... DO UPDATE` syntax supported
-- ✅ **Foreign key constraints**: Referential integrity maintained
-- ✅ **Authentication**: All OAuth methods work with both databases  
-- ✅ **Virtual contests**: Contest functionality fully compatible
-- ✅ **Transaction safety**: ACID compliance on both platforms
-
-## Performance Considerations
-
-**PostgreSQL advantages:**
-- Better concurrent access
-- Advanced indexing options
-- Full-text search capabilities
-- Better performance with large datasets
-- Production-ready scaling
-
-**SQLite advantages:**
-- Zero configuration
-- Single file storage
-- Excellent for development
-- Lower resource usage
-- Simpler backup/restore
-
 ## Troubleshooting
 
 ### PostgreSQL Connection Issues
@@ -247,7 +222,7 @@ print("DATABASE_PATH:", os.getenv("DATABASE_PATH"))
 
 If you get table/column errors, reinitialize:
 ```bash
-# Backup your data first if important!
+# Backup your data first!
 python3 backend/database/init/init_db.py
 ```
 
@@ -266,5 +241,3 @@ print('Sample data:', cursor.fetchone())
 conn.close()
 "
 ```
-
-Both SQLite and PostgreSQL should work with the same application code.

@@ -19,7 +19,7 @@ if not is_postgres:
     # SQLite: Always enforce FKs
     c.execute('PRAGMA foreign_keys = ON;')
 
-# Define table creation SQL based on database type
+# users
 if is_postgres:
     users_sql = '''CREATE TABLE users (
         id SERIAL PRIMARY KEY,
@@ -34,9 +34,9 @@ else:
         password TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )'''
-
 c.execute(users_sql)
 
+# auth_identities
 if is_postgres:
     auth_identities_sql = '''CREATE TABLE auth_identities (
         id SERIAL PRIMARY KEY,
@@ -59,9 +59,9 @@ else:
         UNIQUE(provider, provider_user_id),
         FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
     )'''
-
 c.execute(auth_identities_sql)
 
+# problems
 if is_postgres:
     problems_sql = '''CREATE TABLE problems (
         id SERIAL PRIMARY KEY,
@@ -82,9 +82,9 @@ else:
         extra TEXT,
         UNIQUE(source, year, number, extra)
     )'''
-
 c.execute(problems_sql)
 
+# problem_links
 if is_postgres:
     problem_links_sql = '''CREATE TABLE problem_links (
         id SERIAL PRIMARY KEY,
@@ -103,61 +103,9 @@ else:
         UNIQUE (problem_id, platform, url),
         FOREIGN KEY (problem_id) REFERENCES problems(id) ON DELETE CASCADE
     )'''
-
 c.execute(problem_links_sql)
 
-# Create remaining tables (these are compatible between SQLite and PostgreSQL)
-if is_postgres:
-    user_settings_sql = '''CREATE TABLE user_settings (
-        user_id INTEGER PRIMARY KEY,
-        checklist_public BOOLEAN NOT NULL DEFAULT FALSE,
-        olympiad_order TEXT DEFAULT NULL,
-        asc_sort BOOLEAN NOT NULL DEFAULT FALSE,
-        platform_pref TEXT,
-        hidden TEXT DEFAULT NULL,
-        local_storage TEXT DEFAULT NULL,
-        platform_usernames TEXT DEFAULT NULL,
-        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
-    )'''
-    
-    active_virtual_contests_sql = '''CREATE TABLE active_virtual_contests (
-        user_id INTEGER PRIMARY KEY,
-        contest_name TEXT NOT NULL,
-        contest_stage TEXT,
-        start_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        end_time TIMESTAMP,
-        autosynced BOOLEAN NOT NULL DEFAULT FALSE,
-        score REAL,
-        per_problem_scores TEXT,
-        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
-        FOREIGN KEY(contest_name, contest_stage) REFERENCES contests(name, stage) ON DELETE CASCADE
-    )'''
-else:
-    user_settings_sql = '''CREATE TABLE user_settings (
-        user_id INTEGER PRIMARY KEY,
-        checklist_public BOOLEAN NOT NULL DEFAULT 0,
-        olympiad_order TEXT DEFAULT NULL,
-        asc_sort BOOLEAN NOT NULL DEFAULT 0,
-        platform_pref TEXT,
-        hidden TEXT DEFAULT NULL,
-        local_storage TEXT DEFAULT NULL,
-        platform_usernames TEXT DEFAULT NULL,
-        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
-    )'''
-    
-    active_virtual_contests_sql = '''CREATE TABLE active_virtual_contests (
-        user_id INTEGER PRIMARY KEY,
-        contest_name TEXT NOT NULL,
-        contest_stage TEXT,
-        start_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
-        end_time TIMESTAMP,
-        autosynced BOOLEAN NOT NULL DEFAULT 0,
-        score REAL,
-        per_problem_scores TEXT,
-        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
-        FOREIGN KEY(contest_name, contest_stage) REFERENCES contests(name, stage) ON DELETE CASCADE
-    )'''
-
+# >>> ADDED: problem_statuses
 c.execute('''
 CREATE TABLE problem_statuses (
     user_id INTEGER,
@@ -167,10 +115,11 @@ CREATE TABLE problem_statuses (
     status INTEGER DEFAULT 0,
     score REAL DEFAULT 0,
     PRIMARY KEY(user_id, problem_name, source, year),
-    FOREIGN KEY(user_id) REFERENCES users(id)
+    FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 )
 ''')
 
+# >>> ADDED: user_problem_notes
 c.execute('''
 CREATE TABLE user_problem_notes (
     user_id INTEGER NOT NULL,
@@ -184,8 +133,34 @@ CREATE TABLE user_problem_notes (
 )
 ''')
 
+# user_settings
+if is_postgres:
+    user_settings_sql = '''CREATE TABLE user_settings (
+        user_id INTEGER PRIMARY KEY,
+        checklist_public BOOLEAN NOT NULL DEFAULT FALSE,
+        olympiad_order TEXT DEFAULT NULL,
+        asc_sort BOOLEAN NOT NULL DEFAULT FALSE,
+        platform_pref TEXT,
+        hidden TEXT DEFAULT NULL,
+        local_storage TEXT DEFAULT NULL,
+        platform_usernames TEXT DEFAULT NULL,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+    )'''
+else:
+    user_settings_sql = '''CREATE TABLE user_settings (
+        user_id INTEGER PRIMARY KEY,
+        checklist_public BOOLEAN NOT NULL DEFAULT 0,
+        olympiad_order TEXT DEFAULT NULL,
+        asc_sort BOOLEAN NOT NULL DEFAULT 0,
+        platform_pref TEXT,
+        hidden TEXT DEFAULT NULL,
+        local_storage TEXT DEFAULT NULL,
+        platform_usernames TEXT DEFAULT NULL,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
+    )'''
 c.execute(user_settings_sql)
 
+# sessions
 c.execute('''
 CREATE TABLE sessions (
     session_id TEXT PRIMARY KEY,
@@ -194,6 +169,7 @@ CREATE TABLE sessions (
     FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE
 )''')
 
+# contests (stage nullable; enforce uniqueness)
 c.execute('''
 CREATE TABLE contests (
     name TEXT NOT NULL,
@@ -206,21 +182,24 @@ CREATE TABLE contests (
     website TEXT,
     link TEXT,
     notes TEXT,
-    PRIMARY KEY(name, stage),
+    UNIQUE(name, stage),
     CHECK (stage IS NULL OR TRIM(stage) <> '')
 )''')
 
-c.execute('''CREATE TABLE contest_scores (
+# contest_scores (UNIQUE to allow NULL stage)
+c.execute('''
+CREATE TABLE contest_scores (
     contest_name TEXT NOT NULL,
     contest_stage TEXT,
     medal_names TEXT,
     medal_cutoffs TEXT,
     problem_scores TEXT,
-    PRIMARY KEY(contest_name, contest_stage),
+    UNIQUE(contest_name, contest_stage),
     FOREIGN KEY(contest_name, contest_stage)
         REFERENCES contests(name, stage) ON DELETE CASCADE
 )''')
 
+# contest_problems (UNIQUE to allow NULL stage)
 c.execute('''
 CREATE TABLE contest_problems (
     contest_name   TEXT NOT NULL,
@@ -230,13 +209,14 @@ CREATE TABLE contest_problems (
     problem_number INTEGER,
     problem_extra  TEXT,
     problem_index  INTEGER NOT NULL,
-    PRIMARY KEY (contest_name, contest_stage, problem_index),
+    UNIQUE (contest_name, contest_stage, problem_index),
     FOREIGN KEY (contest_name, contest_stage)
         REFERENCES contests(name, stage) ON DELETE CASCADE,
     FOREIGN KEY (problem_source, problem_year, problem_number, problem_extra)
         REFERENCES problems(source, year, number, extra) ON DELETE CASCADE
 )''')
 
+# user_virtual_contests (UNIQUE to allow NULL stage)
 c.execute('''
   CREATE TABLE user_virtual_contests (
     user_id INTEGER NOT NULL,
@@ -246,11 +226,12 @@ c.execute('''
     ended_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     score REAL,
     per_problem_scores TEXT,
-    PRIMARY KEY(user_id, contest_name, contest_stage),
+    UNIQUE(user_id, contest_name, contest_stage),
     FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY(contest_name, contest_stage) REFERENCES contests(name, stage) ON DELETE CASCADE
 )''')
 
+# user_virtual_submissions
 c.execute('''
 CREATE TABLE user_virtual_submissions (
     user_id INTEGER NOT NULL,
@@ -265,15 +246,45 @@ CREATE TABLE user_virtual_submissions (
         ON DELETE CASCADE
 )''')
 
+# active_virtual_contests
+if is_postgres:
+    active_virtual_contests_sql = '''
+    CREATE TABLE active_virtual_contests (
+        user_id INTEGER PRIMARY KEY,
+        contest_name TEXT NOT NULL,
+        contest_stage TEXT,
+        start_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        end_time TIMESTAMP,
+        autosynced BOOLEAN NOT NULL DEFAULT FALSE,
+        score REAL,
+        per_problem_scores TEXT,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        FOREIGN KEY(contest_name, contest_stage) REFERENCES contests(name, stage) ON DELETE CASCADE
+    )'''
+else:
+    active_virtual_contests_sql = '''
+    CREATE TABLE active_virtual_contests (
+        user_id INTEGER PRIMARY KEY,
+        contest_name TEXT NOT NULL,
+        contest_stage TEXT,
+        start_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        end_time TIMESTAMP,
+        autosynced BOOLEAN NOT NULL DEFAULT 0,
+        score REAL,
+        per_problem_scores TEXT,
+        FOREIGN KEY(user_id) REFERENCES users(id) ON DELETE CASCADE,
+        FOREIGN KEY(contest_name, contest_stage) REFERENCES contests(name, stage) ON DELETE CASCADE
+    )'''
 c.execute(active_virtual_contests_sql)
 
+# scraper_auth_tokens
 c.execute('''
 CREATE TABLE scraper_auth_tokens (
     platform TEXT NOT NULL,
-    token TEXT NOT NULL       
+    token TEXT NOT NULL
 )''')
 
-# Create unique index - PostgreSQL and SQLite have the same syntax for this
+# Partial unique index for (name, NULL) contests
 c.execute('''
 CREATE UNIQUE INDEX uq_contests_name_nullstage
 ON contests(name)

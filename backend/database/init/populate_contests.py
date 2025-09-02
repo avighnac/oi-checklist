@@ -39,15 +39,17 @@ yaml_files_by_dir = defaultdict(set)
 conn = get_db()
 cur = conn.cursor()
 
-# Check if we're using PostgreSQL or SQLite
-database_url = os.getenv("DATABASE_URL")
-is_postgres = database_url is not None
+# Dialect + placeholder
+is_postgres = os.getenv("DATABASE_URL") is not None
+P = "%s" if is_postgres else "?"
 
 if not is_postgres:
-    # SQLite: Enforce FKs and set manual transactions
     cur.execute("PRAGMA foreign_keys = ON;")
-    # Manual transactions
     conn.isolation_level = None
+
+# Helpers
+def ph(n: int) -> str:
+    return "(" + ", ".join([P] * n) + ")"
 
 def normalize_extra(val):
     if val is None:
@@ -63,82 +65,174 @@ def normalize_stage(val):
     return None if s == "" else s
 
 def delete_children_for_contest(name, stage):
-    if stage is None:
+    cond = "IS NULL" if stage is None else f"= {P}"
+    params = (name,) if stage is None else (name, stage)
+    for table in ("contest_problems", "contest_scores"):
         cur.execute(
-            "DELETE FROM contest_problems WHERE contest_name = ? AND contest_stage IS NULL",
-            (name,),
-        )
-        cur.execute(
-            "DELETE FROM contest_scores WHERE contest_name = ? AND contest_stage IS NULL",
-            (name,),
-        )
-    else:
-        cur.execute(
-            "DELETE FROM contest_problems WHERE contest_name = ? AND contest_stage = ?",
-            (name, stage),
-        )
-        cur.execute(
-            "DELETE FROM contest_scores WHERE contest_name = ? AND contest_stage = ?",
-            (name, stage),
+            f"DELETE FROM {table} WHERE contest_name = {P} AND contest_stage {cond}",
+            params,
         )
 
+# SQL templates
+UPSERT_NON_NULL_STAGE = (
+    f"""
+    INSERT INTO contests (
+        name, stage, location, duration_minutes, source, year,
+        date, website, link, notes
+    )
+    VALUES {{vals}}
+    ON CONFLICT (name, stage) DO UPDATE SET
+        location         = EXCLUDED.location,
+        duration_minutes = EXCLUDED.duration_minutes,
+        source           = EXCLUDED.source,
+        year             = EXCLUDED.year,
+        date             = EXCLUDED.date,
+        website          = EXCLUDED.website,
+        link             = EXCLUDED.link,
+        notes            = EXCLUDED.notes
+    """
+    if is_postgres
+    else f"""
+    INSERT INTO contests (
+        name, stage, location, duration_minutes, source, year,
+        date, website, link, notes
+    )
+    VALUES {{vals}}
+    ON CONFLICT(name, stage) DO UPDATE SET
+        location         = excluded.location,
+        duration_minutes = excluded.duration_minutes,
+        source           = excluded.source,
+        year             = excluded.year,
+        date             = excluded.date,
+        website          = excluded.website,
+        link             = excluded.link,
+        notes            = excluded.notes
+    """
+)
+
+# For stage IS NULL:
+# - SQLite keeps its neat partial upsert.
+# - Postgres uses a standard UPSERT via CTE (works with partial unique index).
+UPSERT_NULL_STAGE = (
+    f"""
+    INSERT INTO contests (
+        name, stage, location, duration_minutes, source, year,
+        date, website, link, notes
+    )
+    VALUES {{vals}}
+    ON CONFLICT(name) WHERE stage IS NULL DO UPDATE SET
+        location         = excluded.location,
+        duration_minutes = excluded.duration_minutes,
+        source           = excluded.source,
+        year             = excluded.year,
+        date             = excluded.date,
+        website          = excluded.website,
+        link             = excluded.link,
+        notes            = excluded.notes
+    """
+    if not is_postgres
+    else None
+)
+
+# Postgres CTE upsert for (name, NULL)
+PG_UPSERT_NULL_STAGE = (
+    None
+    if not is_postgres
+    else f"""
+    WITH up AS (
+      UPDATE contests SET
+        location = {P},
+        duration_minutes = {P},
+        source = {P},
+        year = {P},
+        date = {P},
+        website = {P},
+        link = {P},
+        notes = {P}
+      WHERE name = {P} AND stage IS NULL
+      RETURNING 1
+    )
+    INSERT INTO contests (
+        name, stage, location, duration_minutes, source, year,
+        date, website, link, notes
+    )
+    SELECT {P}, NULL, {P}, {P}, {P}, {P}, {P}, {P}, {P}, {P}
+    WHERE NOT EXISTS (SELECT 1 FROM up)
+    """
+)
+
+INSERT_CONTEST_PROBLEM = f"""
+    INSERT INTO contest_problems (
+        contest_name, contest_stage,
+        problem_source, problem_year, problem_number, problem_extra,
+        problem_index
+    ) VALUES {ph(7)}
+"""
+
+INSERT_CONTEST_SCORES = f"""
+    INSERT INTO contest_scores (
+        contest_name, contest_stage,
+        medal_names, medal_cutoffs, problem_scores
+    ) VALUES {ph(5)}
+"""
+
+# Transaction
+cur.execute("BEGIN;")
 try:
-    cur.execute("BEGIN;")
-
     for contest in contests:
         name   = contest["name"]
         source = contest["source"]
         year   = contest["year"]
-        stage  = normalize_stage(contest.get("stage"))  # None or trimmed string
+        stage  = normalize_stage(contest.get("stage"))
 
-        # 1) Upsert contests
+        # Upsert contests
         if stage is None:
-            # Uses partial unique index uq_contests_name_nullstage
-            cur.execute(
-                """
-                INSERT INTO contests (
-                    name, stage, location, duration_minutes, source, year,
-                    date, website, link, notes
-                ) VALUES (?, NULL, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(name) WHERE stage IS NULL DO UPDATE SET
-                    location         = excluded.location,
-                    duration_minutes = excluded.duration_minutes,
-                    source           = excluded.source,
-                    year             = excluded.year,
-                    date             = excluded.date,
-                    website          = excluded.website,
-                    link             = excluded.link,
-                    notes            = excluded.notes
-                """,
-                (
-                    name,
-                    contest.get("location"),
-                    contest.get("duration_minutes"),
-                    source,
-                    year,
-                    contest.get("date"),
-                    contest.get("website"),
-                    contest.get("link"),
-                    contest.get("notes"),
-                ),
-            )
+            if is_postgres:
+                # CTE UPSERT: update-if-exists, else insert
+                cur.execute(
+                    PG_UPSERT_NULL_STAGE,
+                    (
+                        contest.get("location"),
+                        contest.get("duration_minutes"),
+                        source,
+                        year,
+                        contest.get("date"),
+                        contest.get("website"),
+                        contest.get("link"),
+                        contest.get("notes"),
+                        name,  # WHERE name = $ and stage IS NULL
+                        name,  # SELECT name, NULL, ...
+                        contest.get("location"),
+                        contest.get("duration_minutes"),
+                        source,
+                        year,
+                        contest.get("date"),
+                        contest.get("website"),
+                        contest.get("link"),
+                        contest.get("notes"),
+                    ),
+                )
+            else:
+                vals = ph(10)
+                cur.execute(
+                    UPSERT_NULL_STAGE.format(vals=vals),
+                    (
+                        name,
+                        None,
+                        contest.get("location"),
+                        contest.get("duration_minutes"),
+                        source,
+                        year,
+                        contest.get("date"),
+                        contest.get("website"),
+                        contest.get("link"),
+                        contest.get("notes"),
+                    ),
+                )
         else:
+            vals = ph(10)
             cur.execute(
-                """
-                INSERT INTO contests (
-                    name, stage, location, duration_minutes, source, year,
-                    date, website, link, notes
-                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
-                ON CONFLICT(name, stage) DO UPDATE SET
-                    location         = excluded.location,
-                    duration_minutes = excluded.duration_minutes,
-                    source           = excluded.source,
-                    year             = excluded.year,
-                    date             = excluded.date,
-                    website          = excluded.website,
-                    link             = excluded.link,
-                    notes            = excluded.notes
-                """,
+                UPSERT_NON_NULL_STAGE.format(vals=vals),
                 (
                     name,
                     stage,
@@ -153,50 +247,36 @@ try:
                 ),
             )
 
-        # 2) Replace children rows for THIS contest only
+        # Replace children rows for THIS contest only
         delete_children_for_contest(name, stage)
 
-        # 3) Insert problems for the contest
+        # Insert problems for the contest
         for i, p in enumerate(contest.get("problems", []), start=1):
-            problem_extra = normalize_extra(p.get("extra"))
             cur.execute(
-                """
-                INSERT INTO contest_problems (
-                    contest_name, contest_stage,
-                    problem_source, problem_year, problem_number, problem_extra,
-                    problem_index
-                ) VALUES (?, ?, ?, ?, ?, ?, ?)
-                """,
+                INSERT_CONTEST_PROBLEM,
                 (
                     name,
-                    stage,  # may be None; FK matches NULL correctly
+                    stage,
                     p["source"],
                     p["year"],
                     p["number"],
-                    problem_extra,
+                    normalize_extra(p.get("extra")),
                     i,
                 ),
             )
 
-        # 4) Insert contest_scores (if present)
+        # Insert contest_scores (if present)
         scores_data = contest.get("scores")
         if scores_data:
             problem_keys = sorted(scores_data.keys(), key=int)
             problem_scores = [scores_data[k] for k in problem_keys]
-
             medal_cutoffs_block = contest.get("medal_cutoffs")
             if isinstance(medal_cutoffs_block, list) and medal_cutoffs_block:
                 cutoffs = medal_cutoffs_block[0]
                 medal_names   = list(cutoffs.keys())
                 medal_cutoffs = [cutoffs[m] for m in medal_names]
-
                 cur.execute(
-                    """
-                    INSERT INTO contest_scores (
-                        contest_name, contest_stage,
-                        medal_names, medal_cutoffs, problem_scores
-                    ) VALUES (?, ?, ?, ?, ?)
-                    """,
+                    INSERT_CONTEST_SCORES,
                     (
                         name,
                         stage,
@@ -206,7 +286,7 @@ try:
                     ),
                 )
 
-        # (Pretty-print/debug: record YAML origin)
+        # Pretty-print/debug: record YAML origin
         if stage is None:
             rel_path = Path("data") / "contests" / source.lower() / f"{year}.yaml"
         else:
