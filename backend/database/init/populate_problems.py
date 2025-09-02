@@ -1,7 +1,6 @@
 import os
 import sys
 import json
-import sqlite3
 import subprocess
 import re
 from urllib.parse import urlparse, urlsplit, urlunsplit
@@ -10,6 +9,10 @@ from collections import defaultdict
 from dotenv import load_dotenv, find_dotenv
 
 load_dotenv(find_dotenv())
+
+# Add parent directory to path to import database module
+sys.path.append(str(Path(__file__).parent.parent))
+from db import get_db
 
 backend_dir_env = os.getenv("BACKEND_DIR")
 if not backend_dir_env:
@@ -35,13 +38,16 @@ with JSON_OUT.open("r", encoding="utf-8") as f:
 
 yaml_files_by_dir = defaultdict(set)
 
-db_path = os.getenv("DATABASE_PATH", str(BACKEND_DIR / "database.db"))
-conn = sqlite3.connect(db_path)
-conn.row_factory = sqlite3.Row
+conn = get_db()
 cur = conn.cursor()
 
-# Ensure FK cascade works (needed per-connection in SQLite)
-cur.execute("PRAGMA foreign_keys = ON;")
+# Check if we're using PostgreSQL or SQLite
+database_url = os.getenv("DATABASE_URL")
+is_postgres = database_url is not None
+
+if not is_postgres:
+    # SQLite: Ensure FK cascade works (needed per-connection in SQLite)
+    cur.execute("PRAGMA foreign_keys = ON;")
 
 # Hostname → platform map
 DEFAULT_HOSTNAME_MAP = {

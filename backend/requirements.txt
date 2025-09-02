@@ -4,3 +4,4 @@ flask-cors
 pyjwt
 requests-oauthlib
 pyyaml
+psycopg2-binary
