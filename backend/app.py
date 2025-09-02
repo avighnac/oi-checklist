@@ -184,7 +184,7 @@ def get_problems():
 
     placeholders = ', '.join(['?'] * len(from_names))
     problems_raw = db.execute(
-        f'SELECT *, COALESCE(number, 0) as number FROM problems WHERE source IN ({placeholders}) ORDER BY source, year, number',
+        f'SELECT *, COALESCE(number, 0) as sort_number FROM problems WHERE source IN ({placeholders}) ORDER BY source, year, sort_number',
         tuple(from_names)
     ).fetchall()
 
@@ -283,7 +283,7 @@ def get_user():
         placeholders = ', '.join(['?'] * len(problems_list))
 
         problems_raw = db.execute(
-            f'SELECT *, COALESCE(number, 0) as number FROM problems WHERE source IN ({placeholders}) ORDER BY source, year, number',
+            f'SELECT *, COALESCE(number, 0) as sort_number FROM problems WHERE source IN ({placeholders}) ORDER BY source, year, sort_number',
             tuple(problems_list)
         ).fetchall()
 
