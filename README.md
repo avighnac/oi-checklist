@@ -17,6 +17,7 @@ Try it live: [https://checklist.spoi.org.in](https://checklist.spoi.org.in) or e
 * **Responsive UI with dark mode:** Built for clarity across devices.
 * **Reordering & hiding**: Arrange Olympiads in any order you like, and hide those you don’t want cluttering your view.
 * **Custom notes**: Attach personal notes to problems for strategy, hints, or reminders, enhanced with a rudimentary markdown editor.
+* **Database flexibility:** Supports both PostgreSQL (production) and SQLite (development) databases.
 
 ---
 
@@ -107,7 +108,8 @@ In the `backend/` directory, create a `.env` file with the following values:
 | ----------------------  | ---------------------------------------------------------------- |
 | `PORT`                  | The port your backend will run on.                               |
 | `FLASK_ENV`             | Set to `local` for local development                             |
-| `DATABASE_PATH`         | Path to your SQLite database (e.g., `database.db`)               |
+| `DATABASE_URL`          | PostgreSQL connection string (e.g., `postgresql://user@localhost/oi_checklist`) |
+| `DATABASE_PATH`         | Path to your SQLite database (e.g., `database.db`) - used if DATABASE_URL not set |
 | `BACKEND_DIR`           | Absolute path to the `backend/` folder                           |
 | `FRONTEND_URL`          | URL where the frontend runs (e.g., `http://localhost:5501`)      |
 | `BACKEND_URL`           | URL where the Flask backend runs (e.g., `http://localhost:5001`) |
@@ -119,6 +121,11 @@ In the `backend/` directory, create a `.env` file with the following values:
 | `GOOGLE_CLIENT_SECRET`  | Google OAuth client secret                                       |
 | `QOJ_USER`              | Username for an account that will be used to scrape qoj.ac (VCs) |
 | `QOJ_PASS`              | Corresponding password for that account (to refresh sessions)    |
+
+**Database Configuration:**
+- Use `DATABASE_URL` for PostgreSQL (recommended for production)
+- Use `DATABASE_PATH` for SQLite (development/local)
+- See [POSTGRESQL_MIGRATION.md](POSTGRESQL_MIGRATION.md) for detailed setup instructions
 
 ---
 
