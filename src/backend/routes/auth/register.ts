@@ -1,6 +1,6 @@
 import createError from 'http-errors';
 import crypto from 'crypto';
-import { db } from '@db';
+import { db } from '../../db-simple';
 import { FastifyInstance } from 'fastify';
 
 export async function register(app: FastifyInstance) {
@@ -9,15 +9,17 @@ export async function register(app: FastifyInstance) {
     if (!username || !password) {
       throw new createError.BadRequest('Missing username or password');
     }
-    if (await db.user.findUnique({ where: { username: username } })) {
+    
+    const existingUser = db.prepare('SELECT id FROM users WHERE username = ?').get(username);
+    if (existingUser) {
       throw new createError.Conflict('Username taken');
     }
-    await db.user.create({
-      data: {
-        username,
-        password: crypto.createHash('sha256').update(password).digest('hex')
-      }
-    });
+    
+    db.prepare('INSERT INTO users (username, password) VALUES (?, ?)').run(
+      username,
+      crypto.createHash('sha256').update(password).digest('hex')
+    );
+    
     return { success: true };
   });
 }

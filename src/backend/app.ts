@@ -3,10 +3,15 @@ import fastifyStatic from '@fastify/static';
 import path from 'path';
 import fs from 'fs';
 import { auth } from './routes/auth';
+import { api } from './routes/api';
+import { initDatabase } from './init-db';
+
+initDatabase();
 
 const app = fastify();
 
 app.register(auth, { prefix: '/auth' });
+app.register(api, { prefix: '/api' });
 
 app.register(fastifyStatic, {
   root: path.join(__dirname, '../static/html'),
