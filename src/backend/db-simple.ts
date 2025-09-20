@@ -64,3 +64,47 @@ export interface UserProblemNote {
   note: string;
   updated_at: string;
 }
+
+export interface Contest {
+  id: number;
+  name: string;
+  stage?: string;
+  source: string;
+  year: number;
+  duration_minutes?: number;
+  location?: string;
+  website?: string;
+  link?: string;
+  date?: string;
+  notes?: string;
+}
+
+export interface ContestProblem {
+  id: number;
+  contest_name: string;
+  contest_stage?: string;
+  problem_source: string;
+  problem_year: number;
+  problem_name: string;
+  problem_order: number;
+}
+
+export interface ActiveVirtualContest {
+  user_id: number;
+  contest_name: string;
+  contest_stage?: string;
+  start_time: string;
+  end_time?: string;
+  autosynced: boolean;
+}
+
+export interface UserVirtualContest {
+  id: number;
+  user_id: number;
+  contest_name: string;
+  contest_stage?: string;
+  started_at: string;
+  ended_at: string;
+  score: number;
+  per_problem_scores?: string;
+}
