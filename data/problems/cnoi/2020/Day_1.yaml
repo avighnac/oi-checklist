@@ -1,0 +1,15 @@
+- name: Delicacy
+  number: 1
+  links:
+  - https://dmoj.ca/problem/noi20p1
+  - https://qoj.ac/contest/660/problem/438
+- name: Destiny
+  number: 2
+  links:
+  - https://dmoj.ca/problem/noi20p2
+  - https://qoj.ac/contest/660/problem/439
+- name: Tears
+  number: 3
+  links:
+  - https://dmoj.ca/problem/noi20p3
+  - https://qoj.ac/contest/660/problem/440

@@ -1,0 +1,15 @@
+- name: Dish
+  number: 1
+  links:
+  - https://dmoj.ca/problem/noi20p4
+  - https://qoj.ac/contest/661/problem/441
+- name: Surreal
+  number: 2
+  links:
+  - https://dmoj.ca/problem/noi20p5
+  - https://qoj.ac/contest/661/problem/442
+- name: Road
+  number: 3
+  links:
+  - https://dmoj.ca/problem/noi20p6
+  - https://qoj.ac/contest/661/problem/443
