@@ -1,0 +1,19 @@
+name: BOI 2026
+location: Espoo, Finland
+duration: 300
+website: https://boi2026.cses.fi/
+link: https://qoj.ac/contest/3718
+problems:
+- source: boi
+  year: 2026
+  number: 4
+- source: boi
+  year: 2026
+  number: 5
+- source: boi
+  year: 2026
+  number: 6
+medalCutoffs:
+  gold: 211.0
+  silver: 115.0
+  bronze: 80.0
