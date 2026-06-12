@@ -1,0 +1,27 @@
+- name: Square Patches
+  number: 1
+  link: http://cms.iarcs.org.in:8888/tasks/SquarePatches/description
+- name: Haunted House
+  number: 2
+  link: http://cms.iarcs.org.in:8888/tasks/HauntedHouse/description
+- name: Subtree Queries
+  number: 3
+  link: http://cms.iarcs.org.in:8888/tasks/SubtreeQueries/description
+- name: Mansion Painting
+  number: 4
+  link: http://cms.iarcs.org.in:8888/tasks/MansionPainting/description
+- name: Bureaucracy
+  number: 5
+  link: http://cms.iarcs.org.in:8888/tasks/Bureaucracy/description
+- name: One Way Roads
+  number: 6
+  link: http://cms.iarcs.org.in:8888/tasks/OneWayRoads/description
+- name: Poker on Graph
+  number: 7
+  link: http://cms.iarcs.org.in:8888/tasks/PokerOnGraph/description
+- name: Discounted Shopping
+  number: 8
+  link: http://cms.iarcs.org.in:8888/tasks/DiscountedShopping/description
+- name: Island Counting
+  number: 9
+  link: http://cms.iarcs.org.in:8888/tasks/IslandCounting/description

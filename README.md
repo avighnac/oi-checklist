@@ -7,7 +7,7 @@ Try it live: [https://checklist.spoi.org.in](https://checklist.spoi.org.in) or e
 ## Features
 
 - Mark problems as solved, partially solved, or assign exact scores out of 100.
-- The checklist currently contains ~2,700 problems from 26 different sources.
+- The checklist currently contains ~2,900 problems from 26 different sources.
 - Start official past contests with a live timer and full performance tracking.
 - For contests on [oj.uz](https://oj.uz) and [qoj.ac](https://qoj.ac), submissions are auto-synced and scored per subtask.
 - Post-contest screens show rank, percentile, medal, and more. Based on actual historical results.
