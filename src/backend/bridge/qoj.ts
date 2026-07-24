@@ -110,7 +110,6 @@ export const qoj = {
         [path.resolve(root, 'src/backend/python/qoj/fetchContestScores.py')],
         { stdio: ['pipe', 'pipe', 'pipe'] }
       );
-      console.log(JSON.stringify({ sessions, username, contest }));
       proc.stdin.write(JSON.stringify({ sessions, username, contest }));
       proc.stdin.end();
       let out = '';
