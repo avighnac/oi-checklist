@@ -130,8 +130,8 @@ Create a `.env` file with the following values:
 | `DISCORD_CLIENT_SECRET` | Your Discord client secret |
 | `GOOGLE_CLIENT_ID` | Your Google client ID |
 | `GOOGLE_CLIENT_SECRET` | Your Google client secret |
-| `QOJ_USER` | Username for the qoj.ac account used for scraping |
-| `QOJ_PASS` | Password for the same qoj.ac account |
+| `QOJ_USERS` | Username(s) for the qoj.ac account(s) used for scraping |
+| `QOJ_PASSES` | Password(s) for the same qoj.ac account(s) |
 | `GMAIL_USER` | Email address for a Google account that will be used to send automated emails |
 | `GMAIL_PASS` | App password for that Google account, can be generated after enabling two-factor authentication |
 

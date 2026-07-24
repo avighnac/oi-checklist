@@ -198,8 +198,10 @@ model ActiveVirtualContest {
 }
 
 model ScraperAuthToken {
-  platform String @id
+  platform String
+  username String
   token String
+  @@id([platform, username])
 }
 
 model OAuthState {

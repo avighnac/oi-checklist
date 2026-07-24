@@ -55,8 +55,18 @@ export const GoogleClientId = validateEnv('GOOGLE_CLIENT_ID');
 export const GoogleClientSecret = validateEnv('GOOGLE_CLIENT_SECRET');
 export const DiscordClientId = validateEnv('DISCORD_CLIENT_ID');
 export const DiscordClientSecret = validateEnv('DISCORD_CLIENT_SECRET');
-export const QojUsername = validateEnv('QOJ_USER');
-export const QojPassword = validateEnv('QOJ_PASS');
+function validateEnvList(key: string): string[] {
+  return validateEnv(key).split(',').map(v => v.trim()).filter(Boolean);
+}
+
+export const QojUsers = validateEnvList('QOJ_USERS');
+export const QojPasses = validateEnvList('QOJ_PASSES');
+if (QojUsers.length !== QojPasses.length) {
+  throw new Error('QOJ_USERS and QOJ_PASSES must have the same number of comma-separated entries');
+}
+if (new Set(QojUsers).size !== QojUsers.length) {
+  throw new Error('QOJ_USERS contains duplicate accounts; each entry must be a distinct account');
+}
 export const EncryptionKey = Buffer.from(validateEnv('ENCRYPTION_KEY', false), 'hex');
 export const GmailUsername = validateEnv('GMAIL_USER', false);
 export const GmailPassword = validateEnv('GMAIL_PASS', false);

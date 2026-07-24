@@ -1,20 +1,29 @@
 import { Mutex } from 'async-mutex';
 import { spawn } from 'child_process';
 import path from 'path';
-import { root, QojUsername, QojPassword } from '@config';
+import { root, QojUsers, QojPasses } from '@config';
 import { Prisma, UserProblemData, VirtualSubmission } from '@prisma/client';
 import { db } from '@db';
 
-const tokenLock = new Mutex();
+const tokenLocks = new Map<string, Mutex>();
 
-async function getValidSession(oldSession: string): Promise<{ session?: string, error?: string }> {
-  return tokenLock.runExclusive(async () => {
+function getTokenLock(username: string): Mutex {
+  let lock = tokenLocks.get(username);
+  if (!lock) {
+    lock = new Mutex();
+    tokenLocks.set(username, lock);
+  }
+  return lock;
+}
+
+async function getValidSession(username: string, password: string, oldSession: string): Promise<{ session?: string, error?: string }> {
+  return getTokenLock(username).runExclusive(async () => {
     return new Promise<{ session?: string, error?: string }>((res) => {
       const proc = spawn('python3',
         [path.resolve(root, 'src/backend/python/qoj/refresh.py')],
         { stdio: ['pipe', 'pipe', 'pipe'] }
       );
-      proc.stdin.write(JSON.stringify({ oldSession, username: QojUsername, password: QojPassword }));
+      proc.stdin.write(JSON.stringify({ oldSession, username, password }));
       proc.stdin.end();
       let out = '';
       proc.stdout.on('data', d => out += d.toString());
@@ -24,6 +33,25 @@ async function getValidSession(oldSession: string): Promise<{ session?: string, 
       });
     });
   });
+}
+
+async function getAllValidSessions(): Promise<string[]> {
+  return Promise.all(QojUsers.map(async (username, i) => {
+    const password = QojPasses[i];
+    const existing = await db.scraperAuthToken.findUnique({
+      where: { platform_username: { platform: 'qoj.ac', username } }
+    });
+    const res = await getValidSession(username, password, existing?.token ?? '');
+    if (res.error || !res.session) {
+      throw new Error(res.error ?? `Failed to obtain a session for qoj.ac account "${username}"`);
+    }
+    await db.scraperAuthToken.upsert({
+      where: { platform_username: { platform: 'qoj.ac', username } },
+      update: { token: res.session },
+      create: { platform: 'qoj.ac', username, token: res.session }
+    });
+    return res.session;
+  }));
 }
 
 export const qoj = {
@@ -76,23 +104,14 @@ export const qoj = {
       }
     }
   }>) {
-    let token = await db.scraperAuthToken.findUnique({ where: { platform: 'qoj.ac' } });
-    let res = await getValidSession(token?.token ?? '');
-    if (res.error) {
-      throw new Error(res.error);
-    }
-    await db.scraperAuthToken.upsert({
-      where: { platform: 'qoj.ac' },
-      update: { token: res.session },
-      create: { platform: 'qoj.ac', token: res.session }
-    });
-    let cookie = res.session;
+    const sessions = await getAllValidSessions();
     return new Promise<{ error?: string, submissions?: VirtualSubmission[] }>(res => {
       const proc = spawn('python3',
         [path.resolve(root, 'src/backend/python/qoj/fetchContestScores.py')],
         { stdio: ['pipe', 'pipe', 'pipe'] }
       );
-      proc.stdin.write(JSON.stringify({ session: cookie, username, contest }));
+      console.log(JSON.stringify({ sessions, username, contest }));
+      proc.stdin.write(JSON.stringify({ sessions, username, contest }));
       proc.stdin.end();
       let out = '';
       proc.stdout.on('data', d => out += d.toString());
