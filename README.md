@@ -203,9 +203,9 @@ Below is a brief overview of the key endpoints exposed by the backend.
 
 For full details, check the `src/backend/routes/` directory, each route is self-contained and sufficiently commented.
 
-## AI Declaration
+## Development Notes
 
-I acknowledge the usage of ChatGPT for structural suggestions, and Claude Sonnet 4 to help me implement pages in accordance with my design, using my existing theme.
+ChatGPT was used for structural suggestions, and Claude Sonnet 4 assisted with implementing some pages based on my designs and existing theme.
 
 ## License
 
