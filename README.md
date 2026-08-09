@@ -205,7 +205,7 @@ For full details, check the `src/backend/routes/` directory, each route is self-
 
 ## Development Notes
 
-ChatGPT was used for structural suggestions, and Claude Sonnet 4 assisted with implementing some pages based on my designs and existing theme.
+ChatGPT was used for occasional development suggestions, and Claude Sonnet 4 assisted with implementing some pages based on my designs and existing theme.
 
 ## License
 
