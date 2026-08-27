@@ -1,0 +1,19 @@
+name: IOI 2026
+location: Tashkent, Uzbekistan
+duration: 300
+website: https://ioi2026.uz/
+link: https://oj.uz/problems/source/ioi2026day1
+problems:
+- source: ioi
+  year: 2026
+  number: 1
+- source: ioi
+  year: 2026
+  number: 2
+- source: ioi
+  year: 2026
+  number: 3
+medalCutoffs:
+  gold: 205.0
+  silver: 171.0
+  bronze: 144.0
