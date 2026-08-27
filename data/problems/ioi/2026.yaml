@@ -1,0 +1,30 @@
+- name: Ball Machine
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI26_ballmachine
+  - https://qoj.ac/problem/19101
+- name: Monuments
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI26_monuments
+  - https://qoj.ac/problem/19102
+- name: Tiling
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI26_tiling
+  - https://qoj.ac/problem/19103
+- name: Classroom Game
+  number: 4
+  links:
+  - https://oj.uz/problem/view/IOI26_classroom
+  - https://qoj.ac/problem/19104
+- name: Magic City
+  number: 5
+  links:
+  - https://oj.uz/problem/view/IOI26_magiccity
+  - https://qoj.ac/problem/19105
+- name: Partition
+  number: 6
+  links:
+  - https://oj.uz/problem/view/IOI26_partition
+  - https://qoj.ac/problem/19106
