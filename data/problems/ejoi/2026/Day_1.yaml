@@ -1,0 +1,9 @@
+- name: Increasing
+  number: 1
+  link: https://qoj.ac/contest/3949/problem/19045
+- name: Reconstruct
+  number: 2
+  link: https://qoj.ac/contest/3949/problem/19046
+- name: XORting
+  number: 3
+  link: https://qoj.ac/contest/3949/problem/19047
