@@ -1,0 +1,15 @@
+- name: Impreza
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/PCtteC6gKwc2ZikW8nUZzfyh/site/?key=statement
+  - https://qoj.ac/problem/317
+- name: Inspekcja
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/bLHHUzy1-byoiJSbilgpI6Dc/site/?key=statement
+  - https://qoj.ac/problem/318
+- name: Periodicity
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/FoRguPpW1-czheh8UD_LniGy/site/?key=statement
+  - https://qoj.ac/problem/319

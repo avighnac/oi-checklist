@@ -1,0 +1,6 @@
+- name: Queue
+  number: 2
+  link: https://oj.uz/problem/view/CEOI06_queue
+- name: Walk
+  number: 3
+  link: https://oj.uz/problem/view/CEOI06_walk

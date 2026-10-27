@@ -1,0 +1,15 @@
+- name: Ice Hockey World Championship
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI15_bobek
+  - https://qoj.ac/problem/262
+- name: Nuclearia
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI15_nuclearia
+  - https://qoj.ac/problem/263
+- name: Calvinball Championship, again
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI15_calvinball
+  - https://qoj.ac/problem/264

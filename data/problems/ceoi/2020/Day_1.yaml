@@ -1,0 +1,15 @@
+- name: Fancy Fence
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI20_fancyfence
+  - https://qoj.ac/problem/948
+- name: Roads
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI20_roads
+  - https://qoj.ac/problem/949
+- name: Star Trek
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI20_startrek
+  - https://qoj.ac/problem/950

@@ -1,0 +1,15 @@
+- name: The Minima Game
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/zGq2aLbEYfP96wuSl8SSYSGs/site/?key=statement
+  - https://qoj.ac/problem/577
+- name: Lamp
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/EncjSFKUGONaUWytbsYk6cSz/site/?key=statement
+  - https://qoj.ac/problem/578
+- name: Frog
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/VdGoo4AEt68ZDztfDsJ34iiP/site/?key=statement
+  - https://qoj.ac/problem/579

@@ -1,0 +1,15 @@
+- name: Club Members
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/3Kqkgeapr-W-MBprNjUDGICL/site/?key=statement
+  - https://qoj.ac/problem/536
+- name: Amusing Journeys
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/YY6-3ua-C1rt7q-97laWc0UP/site/?key=statement
+  - https://qoj.ac/problem/537
+- name: Parade
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/1QaUWE_ePAmitZjgAszOVD1U/site/?key=statement
+  - https://qoj.ac/problem/538

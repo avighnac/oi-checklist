@@ -1,0 +1,15 @@
+- name: Naval Battle
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI24_battle
+  - https://qoj.ac/problem/9161
+- name: COVID Tests
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI24_covid
+  - https://qoj.ac/problem/9162
+- name: Text Editor
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI24_editor
+  - https://qoj.ac/problem/9163

@@ -1,0 +1,15 @@
+- name: Plot Purchase
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/KUCDVoRoWc5kQbNZPUrY5eYO/site/?key=statement
+  - https://qoj.ac/problem/13174
+- name: Subdivision of Kingdom
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/a-E26wgLFqHZJv98qc9jQe2E/site/?key=statement
+  - https://qoj.ac/problem/13175
+- name: Triangles
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/oFbVh8iOGlqNYUUueTt5V9N4/site/?key=statement
+  - https://qoj.ac/problem/13176

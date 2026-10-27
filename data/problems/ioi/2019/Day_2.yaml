@@ -1,0 +1,15 @@
+- name: Broken Line
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI19_line
+  - https://qoj.ac/problem/2673
+- name: Vision Program
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI19_vision
+  - https://qoj.ac/problem/2674
+- name: Sky Walking
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI19_walk
+  - https://qoj.ac/problem/2675

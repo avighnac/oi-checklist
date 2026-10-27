@@ -1,0 +1,15 @@
+- name: Digital Circuit
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI22_circuit
+  - https://qoj.ac/problem/4564
+- name: Rarest Insects
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI22_insects
+  - https://qoj.ac/problem/4565
+- name: Thousands Islands
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI22_islands
+  - https://qoj.ac/problem/4566

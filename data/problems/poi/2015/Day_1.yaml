@@ -1,0 +1,15 @@
+- name: Car Washes
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/kYVp05sX8lzHWNwn93xjcYwH/site/?key=statement
+  - https://qoj.ac/problem/10714
+- name: Direction Signs
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/4roJ2TqCXhLN6ftK2jiWKlO9/site/?key=statement
+  - https://qoj.ac/problem/10715
+- name: Trous de Loup
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/07Q0fFk7fU2TmGr6wpPeDCZj/site/?key=statement
+  - https://qoj.ac/problem/10716

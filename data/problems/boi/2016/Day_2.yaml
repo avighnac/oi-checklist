@@ -1,0 +1,10 @@
+- name: Cities
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI16_cities
+  - https://qoj.ac/problem/12521
+- name: Swap
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI16_swap
+  - https://qoj.ac/problem/12523

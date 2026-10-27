@@ -1,0 +1,9 @@
+- name: Garden
+  number: 1
+  link: https://qoj.ac/problem/13796
+- name: Mountain
+  number: 2
+  link: https://qoj.ac/problem/13797
+- name: Mean Sequence
+  number: 3
+  link: https://qoj.ac/problem/13798

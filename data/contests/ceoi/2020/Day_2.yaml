@@ -6,13 +6,16 @@ link: https://oj.uz/problems/source/ceoi2020day2
 problems:
 - source: ceoi
   year: 2020
-  number: 4
+  number: 1
+  extra: Day 2
 - source: ceoi
   year: 2020
-  number: 5
+  number: 2
+  extra: Day 2
 - source: ceoi
   year: 2020
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 236
   silver: 173

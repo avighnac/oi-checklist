@@ -1,0 +1,14 @@
+- name: Stones
+  number: 1
+  links:
+  - https://evaluator.hsin.hr/tasks/SC2021CEOI21stones/
+- name: Tortoise
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI21_tortoise
+  - https://qoj.ac/problem/2278
+- name: Wells
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI21_wells
+  - https://qoj.ac/problem/2279

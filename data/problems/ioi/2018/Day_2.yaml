@@ -1,0 +1,15 @@
+- name: Mechanical Doll
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI18_doll
+  - https://qoj.ac/problem/2745
+- name: Highway Tolls
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI18_highway
+  - https://qoj.ac/problem/2746
+- name: Meetings
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI18_meetings
+  - https://qoj.ac/problem/2747

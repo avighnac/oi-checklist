@@ -1,0 +1,9 @@
+- name: Balloons
+  number: 1
+  link: https://oj.uz/problem/view/CEOI11_bal
+- name: Matching
+  number: 2
+  link: https://oj.uz/problem/view/CEOI11_mat
+- name: Treasure Hunt
+  number: 3
+  link: https://oj.uz/problem/view/CEOI11_tre

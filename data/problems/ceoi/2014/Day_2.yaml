@@ -1,0 +1,9 @@
+- name: '007'
+  number: 1
+  link: https://oj.uz/problem/view/CEOI14_007
+- name: Cake
+  number: 2
+  link: https://oj.uz/problem/view/CEOI14_cake
+- name: Wall
+  number: 3
+  link: https://oj.uz/problem/view/CEOI14_wall

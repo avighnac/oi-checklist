@@ -1,0 +1,15 @@
+- name: Gdzie jest jedynka?
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/2TMZ0x-MC86QBBwLrqDfUVVd/site/?key=statement
+  - https://qoj.ac/problem/13324
+- name: Laser
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/50NNSYZSygWhYhYv77iwZYP7/site/?key=statement
+  - https://qoj.ac/problem/13327
+- name: Polarization
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/vG3DC9--8cjl4sPNwjBj9ag6/site/?key=statement
+  - https://qoj.ac/problem/13328

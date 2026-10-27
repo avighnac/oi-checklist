@@ -1,0 +1,15 @@
+- name: Beech Tree
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI23_beechtree
+  - https://qoj.ac/problem/7121
+- name: Overtaking
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI23_overtaking
+  - https://qoj.ac/problem/7122
+- name: Robot Contest
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI23_robot
+  - https://qoj.ac/problem/7123

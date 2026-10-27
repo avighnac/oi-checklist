@@ -1,0 +1,15 @@
+- name: Words
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/2_ADV6xog8RC2Gk3RVQaGQGI/site/?key=statement
+  - https://qoj.ac/problem/595
+- name: Tablice
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/_i0PmDyArk7mCW0eUJJzEVOA/site/?key=statement
+  - https://qoj.ac/problem/594
+- name: Island
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/6OBIhkGGyfsXCmGFAAe_JW2Y/site/?key=statement
+  - https://qoj.ac/problem/596

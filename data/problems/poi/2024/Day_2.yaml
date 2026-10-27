@@ -1,0 +1,11 @@
+- name: Permutacje
+  number: 1
+  link: https://qoj.ac/problem/11481
+- name: Wyjścia ewakuacyjne
+  number: 2
+  link: https://qoj.ac/problem/11482
+- name: Żyrandol
+  number: 3
+  links:
+  - https://qoj.ac/problem/11483
+  - https://szkopul.edu.pl/problemset/problem/AWwhm-sG6VDE2LwvWMCNS-fB/site/?key=statement

@@ -6,13 +6,16 @@ link: https://oj.uz/problems/source/ioi2011day2
 problems:
 - source: ioi
   year: 2011
-  number: 4
+  number: 1
+  extra: Day 2
 - source: ioi
   year: 2011
-  number: 5
+  number: 2
+  extra: Day 2
 - source: ioi
   year: 2011
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 231.0
   silver: 207.0

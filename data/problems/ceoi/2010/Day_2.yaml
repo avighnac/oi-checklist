@@ -1,0 +1,9 @@
+- name: MP3 Player
+  number: 1
+  link: https://oj.uz/problem/view/CEOI10_mp3player
+- name: PIN
+  number: 2
+  link: https://oj.uz/problem/view/CEOI10_pin
+- name: A Huge Tower
+  number: 3
+  link: https://oj.uz/problem/view/CEOI10_tower

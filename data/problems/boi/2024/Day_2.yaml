@@ -1,0 +1,15 @@
+- name: Fire
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI24_fire
+  - https://qoj.ac/problem/8710
+- name: Tiles
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI24_tiles
+  - https://qoj.ac/problem/8711
+- name: Flooding Wall
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI24_wall
+  - https://qoj.ac/problem/8712

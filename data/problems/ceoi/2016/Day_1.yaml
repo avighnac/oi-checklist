@@ -1,0 +1,10 @@
+- name: ICC
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI16_icc
+  - https://qoj.ac/problem/5531
+- name: Kangaroo
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI16_kangaroo
+  - https://qoj.ac/problem/5532

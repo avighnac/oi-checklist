@@ -1,0 +1,15 @@
+- name: Tricks of the Trade
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI23_trade
+  - https://qoj.ac/problem/7279
+- name: The Ties That Guide Us
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI23_incursion
+  - https://qoj.ac/problem/7280
+- name: How to Avoid Disqualification in 75 Easy Steps
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI23_avoid
+  - https://qoj.ac/problem/7281

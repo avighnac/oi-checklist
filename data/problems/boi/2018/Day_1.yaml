@@ -1,0 +1,15 @@
+- name: Love Polygon
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI18_polygon
+  - https://qoj.ac/problem/39
+- name: Martian DNA
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI18_dna
+  - https://qoj.ac/problem/40
+- name: Worm Worries
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI18_worm
+  - https://qoj.ac/problem/41

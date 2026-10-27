@@ -6,13 +6,16 @@ link: https://oj.uz/problems/source/ioi2026day2
 problems:
 - source: ioi
   year: 2026
-  number: 4
+  number: 1
+  extra: Day 2
 - source: ioi
   year: 2026
-  number: 5
+  number: 2
+  extra: Day 2
 - source: ioi
   year: 2026
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 174.19
   silver: 133.76

@@ -1,0 +1,15 @@
+- name: Midas
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/wrTmzO9-dzEbLtsRUCdMV2_W/site/?key=statement
+  - https://qoj.ac/problem/268
+- name: Grades
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/0KG8REkSLNnY5sVkm7Aei_R7/site/?key=statement
+  - https://qoj.ac/problem/269
+- name: Panini
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/w-dbshXVyRol4LIT9jeP-bNn/site/?key=statement
+  - https://qoj.ac/problem/270

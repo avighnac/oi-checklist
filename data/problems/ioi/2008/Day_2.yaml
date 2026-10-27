@@ -1,0 +1,15 @@
+- name: Linear Garden
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI08_linear_garden
+  - https://qoj.ac/problem/12664
+- name: Teleporters
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI08_teleporters
+  - https://qoj.ac/problem/12666
+- name: Pyramid Base
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI08_pyramid_base
+  - https://qoj.ac/problem/12665

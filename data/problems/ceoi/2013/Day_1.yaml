@@ -1,0 +1,6 @@
+- name: Treasure
+  number: 1
+  link: https://oj.uz/problem/view/CEOI13_treasure2
+- name: Tram
+  number: 2
+  link: https://oj.uz/problem/view/CEOI13_tram

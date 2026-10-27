@@ -1,0 +1,15 @@
+- name: Graph
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI20_graph
+  - https://qoj.ac/problem/5705
+- name: Village
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI20_village
+  - https://qoj.ac/problem/5706
+- name: Viruses
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI20_viruses
+  - https://qoj.ac/problem/5707

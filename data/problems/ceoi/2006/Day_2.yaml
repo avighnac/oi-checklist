@@ -1,0 +1,9 @@
+- name: Connect
+  number: 1
+  link: https://oj.uz/problem/view/CEOI06_connect
+- name: Link
+  number: 2
+  link: https://oj.uz/problem/view/CEOI06_link
+- name: Meandian
+  number: 3
+  link: https://oj.uz/problem/view/CEOI06_meandian

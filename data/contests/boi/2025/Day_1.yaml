@@ -7,12 +7,15 @@ problems:
 - source: boi
   year: 2025
   number: 1
+  extra: Day 1
 - source: boi
   year: 2025
   number: 2
+  extra: Day 1
 - source: boi
   year: 2025
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 133.0
   silver: 97.0

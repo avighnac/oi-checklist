@@ -1,0 +1,6 @@
+- name: Snake
+  number: 1
+  link: https://oj.uz/problem/view/CEOI08_snake
+- name: Fence
+  number: 3
+  link: https://oj.uz/problem/view/CEOI08_fence

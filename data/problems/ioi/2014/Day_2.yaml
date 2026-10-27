@@ -1,0 +1,15 @@
+- name: Gondola
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI14_gondola
+  - https://qoj.ac/problem/1149
+- name: Friend
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI14_friend
+  - https://qoj.ac/problem/1150
+- name: Holiday
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI14_holiday
+  - https://qoj.ac/problem/1151

@@ -1,0 +1,15 @@
+- name: Colors
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI20_colors
+  - https://qoj.ac/problem/5702
+- name: Mixture
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI20_mixture
+  - https://qoj.ac/problem/5703
+- name: Joker
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI20_joker
+  - https://qoj.ac/problem/5704

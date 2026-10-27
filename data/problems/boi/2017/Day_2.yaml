@@ -1,0 +1,15 @@
+- name: Cat in a tree
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI17_catinatree
+  - https://qoj.ac/problem/33
+- name: Friends
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI17_friends
+  - https://qoj.ac/problem/34
+- name: Plus Minus
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI17_plusminus
+  - https://qoj.ac/problem/35

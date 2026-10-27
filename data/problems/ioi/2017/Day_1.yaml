@@ -1,0 +1,15 @@
+- name: Nowruz
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI17_nowruz
+  - https://qoj.ac/problem/2756
+- name: Wiring
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI17_wiring
+  - https://qoj.ac/problem/2757
+- name: Toy Train
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI17_train
+  - https://qoj.ac/problem/2758

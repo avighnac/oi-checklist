@@ -1,0 +1,15 @@
+- name: Comparing Plants
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI20_plants
+  - https://qoj.ac/problem/1134
+- name: Connecting Supertrees
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI20_supertrees
+  - https://qoj.ac/problem/1135
+- name: Carnival Tickets
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI20_tickets
+  - https://qoj.ac/problem/1136

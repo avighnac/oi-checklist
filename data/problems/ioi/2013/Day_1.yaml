@@ -1,0 +1,15 @@
+- name: Dreaming
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI13_dreaming
+  - https://qoj.ac/problem/1152
+- name: Art Class
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI13_artclass
+  - https://qoj.ac/problem/1153
+- name: Wombats
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI13_wombats
+  - https://qoj.ac/problem/1154

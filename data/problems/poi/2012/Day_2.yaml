@@ -1,0 +1,15 @@
+- name: Bezpieczeństwo minimalistyczne
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/aSbIC_LB4H-CGMYPEVue5jFw/site/?key=statement
+  - https://qoj.ac/problem/13309
+- name: Warehouse Store
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/hbT9J8hl2Xw1zWGJBsXN9aic/site/?key=statement
+  - https://qoj.ac/problem/13310
+- name: Prefixsuffix
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/oFbHZH1QYy8yYlyN9AezBIZb/site/?key=statement
+  - https://qoj.ac/problem/13311

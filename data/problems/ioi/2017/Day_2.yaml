@@ -1,0 +1,15 @@
+- name: The Big Prize
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI17_prize
+  - https://qoj.ac/problem/2759
+- name: Simurgh
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI17_simurgh
+  - https://qoj.ac/problem/2760
+- name: Ancient Books
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI17_books
+  - https://qoj.ac/problem/2761

@@ -1,0 +1,15 @@
+- name: Art Collections
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI22_art
+  - https://qoj.ac/problem/4205
+- name: Event Hopping
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI22_events
+  - https://qoj.ac/problem/4206
+- name: Uplifting Excursion
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI22_vault
+  - https://qoj.ac/problem/4207

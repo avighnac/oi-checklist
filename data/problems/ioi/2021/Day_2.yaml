@@ -1,0 +1,15 @@
+- name: Mutating DNA
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI21_dna
+  - https://qoj.ac/problem/1143
+- name: Dungeons Game
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI21_dungeons
+  - https://qoj.ac/problem/1144
+- name: Bit Shift Registers
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI21_registers
+  - https://qoj.ac/problem/1145

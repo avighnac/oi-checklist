@@ -7,12 +7,15 @@ problems:
 - source: ioi
   year: 2014
   number: 1
+  extra: Day 1
 - source: ioi
   year: 2014
   number: 2
+  extra: Day 1
 - source: ioi
   year: 2014
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 230.0
   silver: 162.0

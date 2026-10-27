@@ -1,0 +1,15 @@
+- name: Meteors
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/czzVm7v3I58TnPHzBgWiyELT/site/?key=statement
+  - https://qoj.ac/problem/320
+- name: Sticks
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/iqmKYlJL1Oz_sPCgi1BLqKRx/site/?key=statement
+  - https://qoj.ac/problem/321
+- name: Programming Contest
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/V5GPagFaNYlHkVBoXtHbbAxX/site/?key=statement
+  - https://qoj.ac/problem/322

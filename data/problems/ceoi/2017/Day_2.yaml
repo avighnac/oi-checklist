@@ -1,0 +1,15 @@
+- name: Building Bridges
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI17_building
+  - https://qoj.ac/problem/792
+- name: Palindromic Partitions
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI17_palindromic
+  - https://qoj.ac/problem/793
+- name: Chase
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI17_chase
+  - https://qoj.ac/problem/794

@@ -1,0 +1,15 @@
+- name: Bowling
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI15_bow
+  - https://qoj.ac/problem/13033
+- name: Editor
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI15_edi
+  - https://qoj.ac/problem/13034
+- name: Network
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI15_net
+  - https://qoj.ac/problem/13035

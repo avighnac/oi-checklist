@@ -7,12 +7,15 @@ problems:
 - source: poi
   year: 2017
   number: 1
+  extra: Day 1
 - source: poi
   year: 2017
   number: 2
+  extra: Day 1
 - source: poi
   year: 2017
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 292
   silver: 216

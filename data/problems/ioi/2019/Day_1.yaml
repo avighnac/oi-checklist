@@ -1,0 +1,15 @@
+- name: Arranging Shoes
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI19_shoes
+  - https://qoj.ac/problem/2670
+- name: Split the Attractions
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI19_split
+  - https://qoj.ac/problem/2671
+- name: Rectangles
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI19_rect
+  - https://qoj.ac/problem/2672

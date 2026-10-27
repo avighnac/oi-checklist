@@ -1,0 +1,15 @@
+- name: Fibonacci Representations
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI18_fib
+  - https://qoj.ac/problem/798
+- name: Toys
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI18_toy
+  - https://qoj.ac/problem/799
+- name: Triangles
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI18_tri
+  - https://qoj.ac/problem/800

@@ -1,0 +1,9 @@
+- name: Ball Machine
+  number: 1
+  link: https://oj.uz/problem/view/BOI13_ballmachine
+- name: Palindrome-Free Numbers
+  number: 2
+  link: https://oj.uz/problem/view/BOI13_numbers
+- name: Pipes
+  number: 3
+  link: https://oj.uz/problem/view/BOI13_pipes

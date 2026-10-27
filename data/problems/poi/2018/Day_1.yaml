@@ -1,0 +1,15 @@
+- name: Complete Numbers
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/GfNdWdsmfgHxoByl0ETuZW9c/site/?key=statement
+  - https://qoj.ac/problem/8798
+- name: Fence
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/guoc36QCEe4q47qruYB7HBV-/site/?key=statement
+  - https://qoj.ac/problem/8799
+- name: Triinformathlon
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/URPMk7vthz60i1J3MT3XbIIO/site/?key=statement
+  - https://qoj.ac/problem/8800

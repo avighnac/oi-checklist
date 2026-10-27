@@ -1,0 +1,15 @@
+- name: Closing Time
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI23_closing
+  - https://qoj.ac/problem/7118
+- name: Longest Trip
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI23_longesttrip
+  - https://qoj.ac/problem/7119
+- name: Soccer Stadium
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI23_soccer
+  - https://qoj.ac/problem/7120

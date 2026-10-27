@@ -1,0 +1,15 @@
+- name: Horses
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI15_horses
+  - https://qoj.ac/problem/2788
+- name: Sorting
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI15_sorting
+  - https://qoj.ac/problem/2789
+- name: Towns
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI15_towns
+  - https://qoj.ac/problem/2790

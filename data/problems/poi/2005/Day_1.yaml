@@ -1,0 +1,15 @@
+- name: Special Forces
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/Cyqv1x7xJRdcwj24GKoOZyl3/site/?key=statement
+  - https://qoj.ac/problem/11867
+- name: Two Parties
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/VTgYcRFl4Fj0Z1o-SqFyaaD1/site/?key=statement
+  - https://qoj.ac/problem/11868
+- name: Double-Row
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/TcT3eHfPGmUV2NmvzqyvVn9e/site/?key=statement
+  - https://qoj.ac/problem/11869

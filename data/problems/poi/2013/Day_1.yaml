@@ -1,0 +1,15 @@
+- name: Bytecomputer
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/3GXkVUEnWNZRn2C2VpX2uKmq/site/?key=statement
+  - https://qoj.ac/problem/13323
+- name: Maze
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/TE77UNYEUxsFcrRxYRPc99na/site/?key=statement
+  - https://qoj.ac/problem/13326
+- name: Colorful Chain
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/MAWN1VdLdXO29VvrVYuYxQyw/site/?key=statement
+  - https://qoj.ac/problem/13325

@@ -1,0 +1,15 @@
+- name: The short shank; Redemption
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI21_prison
+  - https://qoj.ac/problem/2424
+- name: The Collection Game
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI21_swaps
+  - https://qoj.ac/problem/2425
+- name: The Xana coup
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI21_xanadu
+  - https://qoj.ac/problem/2426

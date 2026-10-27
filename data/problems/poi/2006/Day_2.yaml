@@ -1,0 +1,15 @@
+- name: Teddies
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/rjT2toimgFwJAHEb_-Lm75qm/site/?key=statement
+  - https://qoj.ac/problem/485
+- name: Palindromy
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/HZe8i5clz3sEyDRgoC0sYTaH/site/?key=statement
+  - https://qoj.ac/problem/486
+- name: Sophie
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/Igfr_XfXWhPW-td_1TuZvWm1/site/?key=statement
+  - https://qoj.ac/problem/487

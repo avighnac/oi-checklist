@@ -1,0 +1,15 @@
+- name: Kolekcjoner Bajtemonów
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/i_8o_TvZ2QA9MWo4h1PglK0H/site/?key=statement
+  - https://qoj.ac/problem/10717
+- name: Highway Modernization
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/z0rincXf7fi157ycO_Sl0bCb/site/?key=statement
+  - https://qoj.ac/problem/10718
+- name: Trips
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/zKf5Ua8okcS0jngsrTgKVM9L/site/?key=statement
+  - https://qoj.ac/problem/10719

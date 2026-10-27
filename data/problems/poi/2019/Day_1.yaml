@@ -1,0 +1,15 @@
+- name: Renovation
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/xNjwUvwdHQoQTFBrmyG8vD1O/site/?key=statement
+  - https://qoj.ac/problem/395
+- name: Auto Racing
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/S8phA644ooC9arh6FhXzvbiH/site/?key=statement
+  - https://qoj.ac/problem/396
+- name: Globetrotter Congress
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/bS_effBgQtuS7NXJA_dn7Ogm/site/?key=statement
+  - https://qoj.ac/problem/397

@@ -1,4 +1,5 @@
 database.db
+database copy.db
 .env
 __pycache__
 ~*

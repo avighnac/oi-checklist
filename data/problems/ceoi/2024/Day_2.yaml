@@ -1,0 +1,15 @@
+- name: Toy
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI24_toy
+  - https://qoj.ac/problem/9164
+- name: Petrol Stations
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI24_stations
+  - https://qoj.ac/problem/9165
+- name: Sprinklers
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI24_sprinklers
+  - https://qoj.ac/problem/9166

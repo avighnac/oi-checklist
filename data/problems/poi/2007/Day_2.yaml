@@ -1,0 +1,15 @@
+- name: Egzamin na prawo jazdy
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/nLSrpyeJ1JnFGbBORYVVavIQ/site/?key=statement
+  - https://qoj.ac/problem/12698
+- name: Klocki
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/dzRn8XS_ypGMFV-bqZLgBBB5/site/?key=statement
+  - https://qoj.ac/problem/12699
+- name: Quaternary Balance
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/yAp_TKw6g0VUWE2TJfzia9y0/site/?key=statement
+  - https://qoj.ac/problem/12700

@@ -1,0 +1,15 @@
+- name: Crocodile
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI11_crocodile
+  - https://qoj.ac/problem/2004
+- name: Elephants
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI11_elephants
+  - https://qoj.ac/problem/2005
+- name: Parrots
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI11_parrots
+  - https://qoj.ac/problem/2006

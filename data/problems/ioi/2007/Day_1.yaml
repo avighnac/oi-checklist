@@ -1,0 +1,15 @@
+- name: Aliens
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI07_aliens
+  - https://qoj.ac/problem/13039
+- name: Flood
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI07_flood
+  - https://qoj.ac/problem/13040
+- name: Sails
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI07_sails
+  - https://qoj.ac/problem/13041

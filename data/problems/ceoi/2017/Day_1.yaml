@@ -1,0 +1,15 @@
+- name: One-Way Streets
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI17_oneway
+  - https://qoj.ac/problem/789
+- name: Sure Bet
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI17_sure
+  - https://qoj.ac/problem/790
+- name: Mousetrap
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI17_mousetrap
+  - https://qoj.ac/problem/791

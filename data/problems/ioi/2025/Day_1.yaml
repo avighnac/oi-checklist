@@ -1,0 +1,15 @@
+- name: Souvenirs
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI25_souvenirs
+  - https://qoj.ac/problem/13902
+- name: Triple Peaks
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI25_triples
+  - https://qoj.ac/problem/13903
+- name: World Map
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI25_worldmap
+  - https://qoj.ac/problem/13904

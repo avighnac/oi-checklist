@@ -1,0 +1,15 @@
+- name: The Potion of Great Power
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI20_potion
+  - https://qoj.ac/problem/951
+- name: Spring Cleaning
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI20_cleaning
+  - https://qoj.ac/problem/952
+- name: Chess Rush
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI20_chessrush
+  - https://qoj.ac/problem/953

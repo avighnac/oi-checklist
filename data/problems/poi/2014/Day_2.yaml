@@ -1,0 +1,15 @@
+- name: Solar Lamps
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/GBNhbXwWhoCD5GHjNFAm_pOJ/site/?key=statement
+  - https://qoj.ac/problem/308
+- name: Solar Panels
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/hzKdkq0maus68ExIKeHyERTJ/site/?key=statement
+  - https://qoj.ac/problem/309
+- name: Freight
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/tbAODT0mS1ZwmNfteVw6W8JZ/site/?key=statement
+  - https://qoj.ac/problem/310

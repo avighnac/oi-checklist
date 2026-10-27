@@ -1,0 +1,9 @@
+- name: Carnival
+  number: 1
+  link: https://oj.uz/problem/view/CEOI14_carnival
+- name: The Forest of Fangorn
+  number: 2
+  link: https://oj.uz/problem/view/CEOI14_fangorn
+- name: Question
+  number: 3
+  link: https://oj.uz/problem/view/CEOI14_question_grader

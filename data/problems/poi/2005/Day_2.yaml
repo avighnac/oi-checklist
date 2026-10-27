@@ -1,0 +1,15 @@
+- name: The Bus
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/YBrY12KT6hTbgYrqwXhH3soW/site/?key=statement
+  - https://qoj.ac/problem/11870
+- name: Mirror Trap
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/fNjmmASbl-0BUyNIqwXSwbyn/site/?key=statement
+  - https://qoj.ac/problem/11871
+- name: Dextrogyrate Camel
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/Ycgy3PbuMUIf8Cz2RdFpRCe4/site/?key=statement
+  - https://qoj.ac/problem/11872

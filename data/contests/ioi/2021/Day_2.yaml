@@ -7,13 +7,16 @@ notes: IOI 2021 was held online by NUS due to COVID-19.
 problems:
 - source: ioi
   year: 2021
-  number: 4
+  number: 1
+  extra: Day 2
 - source: ioi
   year: 2021
-  number: 5
+  number: 2
+  extra: Day 2
 - source: ioi
   year: 2021
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 208.0
   silver: 172.0

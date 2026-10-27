@@ -1,0 +1,15 @@
+- name: Match
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI16_match
+  - https://qoj.ac/problem/5534
+- name: Popeala
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI16_popeala
+  - https://qoj.ac/problem/5535
+- name: Router
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI16_router
+  - https://qoj.ac/problem/5536

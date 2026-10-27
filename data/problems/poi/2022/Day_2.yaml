@@ -1,0 +1,11 @@
+- name: Meteory
+  number: 1
+  link: https://qoj.ac/problem/10631
+- name: Szablon 2
+  number: 2
+  links:
+  - https://qoj.ac/problem/10632
+  - https://szkopul.edu.pl/problemset/problem/4GJfmOVwv_koH74nf7IV3lr9/site/?key=statement
+- name: Waga
+  number: 3
+  link: https://qoj.ac/problem/10633

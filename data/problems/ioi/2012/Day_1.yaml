@@ -1,0 +1,13 @@
+- name: Pebbling Odometer
+  number: 1
+  link: https://qoj.ac/contest/284/problem/1501
+- name: Parachute Rings
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI12_rings
+  - https://qoj.ac/problem/1502
+- name: Crayfish Scrivener
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI12_scrivener
+  - https://qoj.ac/problem/1503

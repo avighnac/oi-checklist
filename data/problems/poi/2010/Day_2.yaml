@@ -1,0 +1,15 @@
+- name: Ones
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/SYv6VGnZ_7dhrf9WwAJgWBk_/site/?key=statement
+  - https://qoj.ac/problem/580
+- name: Bridges
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/BKM4bb6_C3OZsScdRxzaed8N/site/?key=statement
+  - https://qoj.ac/problem/581
+- name: Pilots
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/4ZH1h7Wr18Yb7B0L7ym_Km0L/site/?key=statement
+  - https://qoj.ac/problem/582

@@ -7,12 +7,15 @@ problems:
 - source: boi
   year: 2019
   number: 1
+  extra: Day 1
 - source: boi
   year: 2019
   number: 2
+  extra: Day 1
 - source: boi
   year: 2019
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 237.2
   silver: 187.4

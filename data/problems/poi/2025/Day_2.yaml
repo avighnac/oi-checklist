@@ -1,0 +1,11 @@
+- name: Lokacja miasta
+  number: 1
+  link: https://qoj.ac/problem/10618
+- name: Przyjaciele i wrogowie
+  number: 2
+  links:
+  - https://qoj.ac/problem/10619
+  - https://szkopul.edu.pl/problemset/problem/SSCZFOeuhe8_DNgsgFo9moDz/site/?key=statement
+- name: Redukcja połączeń
+  number: 3
+  link: https://szkopul.edu.pl/problemset/problem/8nZ0jURcTr-O3V0ASzQJOCpy/site/?key=statement

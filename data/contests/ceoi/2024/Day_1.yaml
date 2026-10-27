@@ -7,12 +7,15 @@ problems:
 - source: ceoi
   year: 2024
   number: 1
+  extra: Day 1
 - source: ceoi
   year: 2024
   number: 2
+  extra: Day 1
 - source: ceoi
   year: 2024
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 275.12
   silver: 195.55

@@ -7,12 +7,15 @@ problems:
 - source: boi
   year: 2021
   number: 1
+  extra: Day 1
 - source: boi
   year: 2021
   number: 2
+  extra: Day 1
 - source: boi
   year: 2021
   number: 3
+  extra: Day 1
 medalCutoffs:
   gold: 152.5
   silver: 102.5

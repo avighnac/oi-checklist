@@ -1,0 +1,9 @@
+- name: Hotel
+  number: 1
+  link: https://oj.uz/problem/view/CEOI11_hot
+- name: Teams
+  number: 2
+  link: https://oj.uz/problem/view/CEOI11_tea
+- name: Traffic
+  number: 3
+  link: https://oj.uz/problem/view/CEOI11_tra

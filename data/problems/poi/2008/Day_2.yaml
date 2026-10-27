@@ -1,0 +1,10 @@
+- name: Permutation
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/YQSokeBN7xK7z8KccTxjfeDk/site/?key=statement
+  - https://qoj.ac/problem/13177
+- name: Stacja
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/7Pd1uIyue3oHambW1v-ADJDN/site/?key=statement
+  - https://qoj.ac/problem/13178

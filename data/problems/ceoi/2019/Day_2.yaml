@@ -1,0 +1,15 @@
+- name: Amusement Park
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI19_amusementpark
+  - https://qoj.ac/problem/945
+- name: Magic Tree
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI19_magictree
+  - https://qoj.ac/problem/946
+- name: Scissors and Tape
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI19_scissors
+  - https://qoj.ac/problem/947

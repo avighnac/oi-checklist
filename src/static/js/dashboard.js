@@ -859,6 +859,9 @@ async function loadProblems(from) {
       prefix === 'ROI' ||
       prefix === 'BKOI' ||
       prefix === 'IOI' ||
+      prefix === 'BOI' ||
+      prefix === 'POI' ||
+      prefix === 'CEOI' ||
       prefix === 'CNOI' ||
       prefix === 'COCI' ||
       prefix === 'RMI';
@@ -931,14 +934,27 @@ async function loadProblems(from) {
             yearRow.appendChild(cell);
           }
         } else {
-          const extraRow = document.createElement('tr');
+          let extraRow = document.createElement('tr');
           const extraCell = document.createElement('td');
           extraCell.className = 'day-cell';
           extraCell.textContent = extra;
+          const dayProblems = extraMap[extra];
+          const rowSize = from === 'IOI'
+            ? (dayProblems.length === 4 ? 2 : 3)
+            : dayProblems.length;
+          extraCell.rowSpan = Math.ceil(dayProblems.length / rowSize);
           extraRow.appendChild(extraCell);
-          for (const problem of extraMap[extra]) {
+          for (const [index, problem] of dayProblems.entries()) {
+            if (index > 0 && index % rowSize === 0) {
+              tbody.appendChild(extraRow);
+              extraRow = document.createElement('tr');
+            }
             const cell = document.createElement('td');
             cell.className = 'problem-cell';
+            if (from === 'IOI') {
+              const rowStart = Math.floor(index / rowSize) * rowSize;
+              cell.colSpan = 6 / Math.min(rowSize, dayProblems.length - rowStart);
+            }
             const statusValue = Number.isFinite(problem.status)
               ? problem.status
               : 0;

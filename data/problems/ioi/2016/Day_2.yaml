@@ -1,0 +1,15 @@
+- name: Paint By Numbers
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI16_paint
+  - https://qoj.ac/problem/2782
+- name: Unscrambling a Messy Bug
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI16_messy
+  - https://qoj.ac/problem/2783
+- name: Aliens
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI16_aliens
+  - https://qoj.ac/problem/2784

@@ -1,0 +1,9 @@
+- name: City
+  number: 1
+  link: https://oj.uz/problem/view/BOI06_city
+- name: RLE
+  number: 2
+  link: https://oj.uz/problem/view/BOI06_rle
+- name: Jump
+  number: 3
+  link: https://oj.uz/problem/view/BOI06_jump

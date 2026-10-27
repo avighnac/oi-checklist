@@ -6,13 +6,16 @@ link: https://oj.uz/problems/source/ioi2014day2
 problems:
 - source: ioi
   year: 2014
-  number: 4
+  number: 1
+  extra: Day 2
 - source: ioi
   year: 2014
-  number: 5
+  number: 2
+  extra: Day 2
 - source: ioi
   year: 2014
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 216.0
   silver: 176.0

@@ -1,0 +1,9 @@
+- name: Demarcation
+  number: 1
+  link: https://oj.uz/problem/view/BOI14_demarcation
+- name: Portals
+  number: 2
+  link: https://oj.uz/problem/view/BOI14_portals
+- name: Senior Postmen
+  number: 3
+  link: https://oj.uz/problem/view/BOI14_postmen

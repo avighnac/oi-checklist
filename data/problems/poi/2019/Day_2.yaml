@@ -1,0 +1,13 @@
+- name: Long Travels
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/QHh99tBu4p9FMsFohv4da7S7/site/?key=statement
+  - https://qoj.ac/problem/398
+- name: Game of Divisors
+  number: 2
+  link: https://szkopul.edu.pl/problemset/problem/k4iPPyQbhkKRE3kLi6zjUbWz/site/?key=statement
+- name: Ornithologist
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/3QSA66sDeX0fi-Ry_gX1WXhy/site/?key=statement
+  - https://qoj.ac/problem/400

@@ -1,0 +1,15 @@
+- name: Hieroglyphs
+  number: 1
+  links:
+  - https://oj.uz/problem/view/IOI24_hieroglyphs
+  - https://qoj.ac/problem/9239
+- name: Mosaic
+  number: 2
+  links:
+  - https://oj.uz/problem/view/IOI24_mosaic
+  - https://qoj.ac/problem/9240
+- name: Sphinx
+  number: 3
+  links:
+  - https://oj.uz/problem/view/IOI24_sphinx
+  - https://qoj.ac/problem/9241

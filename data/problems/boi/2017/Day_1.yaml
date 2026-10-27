@@ -1,0 +1,15 @@
+- name: Political Development
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI17_politicaldevelopment
+  - https://qoj.ac/problem/30
+- name: Railway
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI17_railway
+  - https://qoj.ac/problem/31
+- name: Toll
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI17_toll
+  - https://qoj.ac/problem/32

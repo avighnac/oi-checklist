@@ -1,0 +1,15 @@
+- name: File Paths
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI15_fil
+  - https://qoj.ac/problem/13036
+- name: Hacker
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI15_hac
+  - https://qoj.ac/problem/13037
+- name: Tug of War
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI15_tug
+  - https://qoj.ac/problem/13038

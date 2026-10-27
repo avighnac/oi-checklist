@@ -1,0 +1,15 @@
+- name: Potemkin Cycle
+  number: 1
+  links:
+  - https://oj.uz/problem/view/CEOI15_indcyc
+  - https://qoj.ac/problem/259
+- name: Calvinball Championship
+  number: 2
+  links:
+  - https://oj.uz/problem/view/CEOI15_teams
+  - https://qoj.ac/problem/260
+- name: Pipes
+  number: 3
+  links:
+  - https://oj.uz/problem/view/CEOI15_pipes
+  - https://qoj.ac/problem/261

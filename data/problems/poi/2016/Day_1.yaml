@@ -1,0 +1,15 @@
+- name: Messenger
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/Mk-9GNDtSal6h_8T4n9Ezq9M/site/?key=statement
+  - https://qoj.ac/problem/533
+- name: Diligent Johny
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/_cVmDXXn2TjF0dF1rW6eazA0/site/?key=statement
+  - https://qoj.ac/problem/534
+- name: Hedge
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/dABzva_j1-BvzKMsyxkuRoue/site/?key=statement
+  - https://qoj.ac/problem/535

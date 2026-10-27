@@ -1,0 +1,15 @@
+- name: Licytacja
+  number: 1
+  links:
+  - https://szkopul.edu.pl/problemset/problem/deIZtcberd8cAXH64zlIq0wC/site/?key=statement
+  - https://qoj.ac/problem/13306
+- name: Salaries
+  number: 2
+  links:
+  - https://szkopul.edu.pl/problemset/problem/4nwnYqhu2gE6dB5aJUCiltnu/site/?key=statement
+  - https://qoj.ac/problem/13307
+- name: Leveling Ground
+  number: 3
+  links:
+  - https://szkopul.edu.pl/problemset/problem/ba-ep4dx0P4_GYxLz15iJVVm/site/?key=statement
+  - https://qoj.ac/problem/13308

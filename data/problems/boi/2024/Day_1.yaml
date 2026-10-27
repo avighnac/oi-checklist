@@ -1,0 +1,15 @@
+- name: Jobs
+  number: 1
+  links:
+  - https://oj.uz/problem/view/BOI24_jobs
+  - https://qoj.ac/problem/8707
+- name: Portal
+  number: 2
+  links:
+  - https://oj.uz/problem/view/BOI24_portal
+  - https://qoj.ac/problem/8708
+- name: Trains
+  number: 3
+  links:
+  - https://oj.uz/problem/view/BOI24_trains
+  - https://qoj.ac/problem/8709

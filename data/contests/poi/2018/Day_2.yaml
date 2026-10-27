@@ -6,13 +6,16 @@ link: https://qoj.ac/contest/1061
 problems:
 - source: poi
   year: 2018
-  number: 4
+  number: 1
+  extra: Day 2
 - source: poi
   year: 2018
-  number: 5
+  number: 2
+  extra: Day 2
 - source: poi
   year: 2018
-  number: 6
+  number: 3
+  extra: Day 2
 medalCutoffs:
   gold: 220
   silver: 173
