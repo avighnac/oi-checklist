@@ -1,0 +1,39 @@
+- name: Autumn Audio
+  number: 1
+  link: https://open.kattis.com/problems/autumnaudio
+- name: Beguiling Your Boss
+  number: 2
+  link: https://open.kattis.com/problems/beguilingyourboss
+- name: Captain's Compass
+  number: 3
+  link: https://open.kattis.com/problems/captainscompass
+- name: Dactylic Hexameter
+  number: 4
+  link: https://open.kattis.com/problems/dactylichexameter
+- name: Exclusive Display
+  number: 5
+  link: https://open.kattis.com/problems/exclusivedisplay
+- name: Folds
+  number: 6
+  link: https://open.kattis.com/problems/folds
+- name: Grand Hotel
+  number: 7
+  link: https://open.kattis.com/problems/grandhotel
+- name: Hydration Station
+  number: 8
+  link: https://open.kattis.com/problems/hydrationstation
+- name: Isolation Intrusion
+  number: 9
+  link: https://open.kattis.com/problems/isolationintrusion
+- name: Judicious Journey
+  number: 10
+  link: https://open.kattis.com/problems/judiciousjourney
+- name: Kumquat Orchard
+  number: 11
+  link: https://open.kattis.com/problems/kumquatorchard
+- name: Laundry Lines
+  number: 12
+  link: https://open.kattis.com/problems/laundrylines
+- name: Marooned
+  number: 13
+  link: https://open.kattis.com/problems/marooned
