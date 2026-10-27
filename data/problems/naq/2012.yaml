@@ -1,0 +1,33 @@
+- name: Quite a problem
+  number: 1
+  link: https://qoj.ac/problem/20137
+- name: Multi-touch gesture classification
+  number: 2
+  link: https://qoj.ac/problem/20138
+- name: Stacking Curvy Blocks
+  number: 3
+  link: https://qoj.ac/problem/20139
+- name: Unicycle counting
+  number: 4
+  link: https://qoj.ac/problem/20140
+- name: Choosing Numbers
+  number: 5
+  link: https://qoj.ac/problem/20141
+- name: Loopy transit
+  number: 6
+  link: https://qoj.ac/problem/20142
+- name: Hitting the Targets
+  number: 7
+  link: https://qoj.ac/problem/20143
+- name: Texas Summers
+  number: 8
+  link: https://qoj.ac/problem/20144
+- name: Out of context
+  number: 9
+  link: https://qoj.ac/problem/20145
+- name: Maze movement
+  number: 10
+  link: https://qoj.ac/problem/20146
+- name: Ragged Right
+  number: 11
+  link: https://qoj.ac/problem/20147

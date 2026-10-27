@@ -1,0 +1,33 @@
+- name: Oddities
+  number: 1
+  link: https://qoj.ac/problem/20148
+- name: Ternarian Weights
+  number: 2
+  link: https://qoj.ac/problem/20149
+- name: Goldbach's Conjecture
+  number: 3
+  link: https://qoj.ac/problem/20150
+- name: Shotcube
+  number: 4
+  link: https://qoj.ac/problem/20151
+- name: Erratic Ants
+  number: 5
+  link: https://qoj.ac/problem/20152
+- name: Plotting Polynomials
+  number: 6
+  link: https://qoj.ac/problem/20153
+- name: Trapezoid Walkway
+  number: 7
+  link: https://qoj.ac/problem/20154
+- name: 4 thought
+  number: 8
+  link: https://qoj.ac/problem/20155
+- name: Biggest Slice
+  number: 9
+  link: https://qoj.ac/problem/20156
+- name: Even Up Solitaire
+  number: 10
+  link: https://qoj.ac/problem/20157
+- name: Island Buses
+  number: 11
+  link: https://qoj.ac/problem/20158

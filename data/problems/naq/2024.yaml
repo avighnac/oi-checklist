@@ -1,0 +1,36 @@
+- name: Balatro
+  number: 1
+  link: https://qoj.ac/problem/8984
+- name: Bikes and Barricades
+  number: 2
+  link: https://qoj.ac/problem/8985
+- name: Call for Problems
+  number: 3
+  link: https://qoj.ac/problem/8986
+- name: Colorful Trees
+  number: 4
+  link: https://qoj.ac/problem/8987
+- name: Dishonest Lottery
+  number: 5
+  link: https://qoj.ac/problem/8988
+- name: Ellipse Eclipse
+  number: 6
+  link: https://qoj.ac/problem/8989
+- name: Gears and Axles
+  number: 7
+  link: https://qoj.ac/problem/8990
+- name: Genetic Reconstruction
+  number: 8
+  link: https://qoj.ac/problem/8991
+- name: Light Up
+  number: 9
+  link: https://qoj.ac/problem/8992
+- name: Menger Sponge
+  number: 10
+  link: https://qoj.ac/problem/8993
+- name: Rhythm Flow
+  number: 11
+  link: https://qoj.ac/problem/8994
+- name: Snake
+  number: 12
+  link: https://qoj.ac/problem/8995

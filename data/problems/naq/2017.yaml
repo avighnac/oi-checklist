@@ -1,0 +1,39 @@
+- name: Birthday Cake
+  number: 1
+  link: https://qoj.ac/problem/20193
+- name: Bumped!
+  number: 2
+  link: https://qoj.ac/problem/20194
+- name: Canonical Coin Systems
+  number: 3
+  link: https://qoj.ac/problem/20195
+- name: Cat and Mice
+  number: 4
+  link: https://qoj.ac/problem/20196
+- name: Company Picnic
+  number: 5
+  link: https://qoj.ac/problem/20197
+- name: GlitchBot
+  number: 6
+  link: https://qoj.ac/problem/20198
+- name: Greeting Card
+  number: 7
+  link: https://qoj.ac/problem/20199
+- name: Imperfect GPS
+  number: 8
+  link: https://qoj.ac/problem/20200
+- name: Odd Gnome
+  number: 9
+  link: https://qoj.ac/problem/20201
+- name: Progressive Scramble
+  number: 10
+  link: https://qoj.ac/problem/20202
+- name: Space Probe
+  number: 11
+  link: https://qoj.ac/problem/20203
+- name: Suspension Bridges
+  number: 12
+  link: https://qoj.ac/problem/20204
+- name: Umbral Decoding
+  number: 13
+  link: https://qoj.ac/problem/20205

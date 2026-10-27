@@ -1,0 +1,33 @@
+- name: Eight Queens
+  number: 1
+  link: https://qoj.ac/problem/20159
+- name: Color Walk
+  number: 2
+  link: https://qoj.ac/problem/20160
+- name: Flexible Spaces
+  number: 3
+  link: https://qoj.ac/problem/20161
+- name: Flip Five
+  number: 4
+  link: https://qoj.ac/problem/20162
+- name: Human Cannonball Run
+  number: 5
+  link: https://qoj.ac/problem/20163
+- name: Mixed Fractions
+  number: 6
+  link: https://qoj.ac/problem/20164
+- name: Pesky Mosquitoes
+  number: 7
+  link: https://qoj.ac/problem/20165
+- name: Narrow Art Gallery
+  number: 8
+  link: https://qoj.ac/problem/20166
+- name: Tractor
+  number: 9
+  link: https://qoj.ac/problem/20167
+- name: Units
+  number: 10
+  link: https://qoj.ac/problem/20168
+- name: Yikes - Bikes!
+  number: 11
+  link: https://qoj.ac/problem/20169

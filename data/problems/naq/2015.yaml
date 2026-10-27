@@ -1,0 +1,33 @@
+- name: All about that base
+  number: 1
+  link: https://qoj.ac/problem/20170
+- name: Bobby's Bet
+  number: 2
+  link: https://qoj.ac/problem/20171
+- name: Cantina of Babel
+  number: 3
+  link: https://qoj.ac/problem/20172
+- name: Circuit Counting
+  number: 4
+  link: https://qoj.ac/problem/20173
+- name: Cutting Brownies
+  number: 5
+  link: https://qoj.ac/problem/20174
+- name: Quick Brown Fox
+  number: 6
+  link: https://qoj.ac/problem/20175
+- name: Safe Passage
+  number: 7
+  link: https://qoj.ac/problem/20176
+- name: Secret Message
+  number: 8
+  link: https://qoj.ac/problem/20177
+- name: Simon Says
+  number: 9
+  link: https://qoj.ac/problem/20178
+- name: Torn To Pieces
+  number: 10
+  link: https://qoj.ac/problem/20179
+- name: UnDetected
+  number: 11
+  link: https://qoj.ac/problem/20180

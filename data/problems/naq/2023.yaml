@@ -1,0 +1,36 @@
+- name: Contest Advancement
+  number: 1
+  link: https://qoj.ac/problem/8243
+- name: Digit Translation
+  number: 2
+  link: https://qoj.ac/problem/8244
+- name: Don’t Hunger Together
+  number: 3
+  link: https://qoj.ac/problem/8245
+- name: Garden of Thorns
+  number: 4
+  link: https://qoj.ac/problem/8246
+- name: ICPC Team Generation
+  number: 5
+  link: https://qoj.ac/problem/8247
+- name: Is Y a Vowel?
+  number: 6
+  link: https://qoj.ac/problem/8248
+- name: Lines Per Hour
+  number: 7
+  link: https://qoj.ac/problem/8249
+- name: Magnesium Supplementation
+  number: 8
+  link: https://qoj.ac/problem/8250
+- name: Missing Number
+  number: 9
+  link: https://qoj.ac/problem/8251
+- name: Tip of Your Tongue
+  number: 10
+  link: https://qoj.ac/problem/8252
+- name: Very Important Edge
+  number: 11
+  link: https://qoj.ac/problem/8253
+- name: Water Journal
+  number: 12
+  link: https://qoj.ac/problem/8254

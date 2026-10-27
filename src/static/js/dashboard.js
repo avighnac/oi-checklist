@@ -999,7 +999,7 @@ async function loadProblems(from) {
       const yearCell = document.createElement('td');
       yearCell.className = 'year-cell';
       yearCell.textContent = `${prefix} ${year}`;
-      const wrapRows = ['GCPC', 'NCPC', 'NWERC'].includes(from);
+      const wrapRows = ['GCPC', 'NCPC', 'NWERC', 'NAQ'].includes(from);
       const rowProblems = wrapRows
         ? [...problems].sort((a, b) => a.number - b.number)
         : problems;
@@ -1204,7 +1204,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const { olympiadOrder, hiddenOlympiads, ascSort, platformPref } = await resp.json();
       if (Array.isArray(olympiadOrder)) {
         sources = olympiadOrder.map((id) => id.toUpperCase());
-        for (const source of ['GCPC', 'NCPC', 'NWERC']) {
+        for (const source of ['GCPC', 'NCPC', 'NWERC', 'NAQ']) {
           if (!sources.includes(source) && !hiddenOlympiads?.includes(source.toLowerCase())) {
             sources.push(source);
           }

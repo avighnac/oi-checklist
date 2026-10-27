@@ -1,0 +1,42 @@
+- name: Alien Integers
+  number: 1
+  link: https://qoj.ac/problem/2393
+- name: Avoiding Asteroids
+  number: 2
+  link: https://qoj.ac/problem/2394
+- name: Common Factors
+  number: 3
+  link: https://qoj.ac/problem/2395
+- name: Dimensional Analysis
+  number: 4
+  link: https://qoj.ac/problem/2396
+- name: Eye of Sauron
+  number: 5
+  link: https://qoj.ac/problem/2397
+- name: ilove Strings
+  number: 6
+  link: https://qoj.ac/problem/2398
+- name: MrCodeFormatGrader
+  number: 7
+  link: https://qoj.ac/problem/2399
+- name: Mult!
+  number: 8
+  link: https://qoj.ac/problem/2400
+- name: Pizza Party!
+  number: 9
+  link: https://qoj.ac/problem/2401
+- name: Stacking Up
+  number: 10
+  link: https://qoj.ac/problem/2402
+- name: Stamp Combinations
+  number: 11
+  link: https://qoj.ac/problem/2403
+- name: Sword Counting
+  number: 12
+  link: https://qoj.ac/problem/2404
+- name: Tic-Tac State
+  number: 13
+  link: https://qoj.ac/problem/2405
+- name: Venn Intervals
+  number: 14
+  link: https://qoj.ac/problem/2406

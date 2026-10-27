@@ -1,0 +1,36 @@
+- name: A New Alphabet
+  number: 1
+  link: https://qoj.ac/problem/20181
+- name: Arcade!
+  number: 2
+  link: https://qoj.ac/problem/20182
+- name: Big Truck
+  number: 3
+  link: https://qoj.ac/problem/20183
+- name: Brackets
+  number: 4
+  link: https://qoj.ac/problem/20184
+- name: Dots and Boxes
+  number: 5
+  link: https://qoj.ac/problem/20185
+- name: Free Desserts
+  number: 6
+  link: https://qoj.ac/problem/20186
+- name: Inverse Factorial
+  number: 7
+  link: https://qoj.ac/problem/20187
+- name: Nine Packs
+  number: 8
+  link: https://qoj.ac/problem/20188
+- name: Primonimo
+  number: 9
+  link: https://qoj.ac/problem/20189
+- name: Quick Estimates
+  number: 10
+  link: https://qoj.ac/problem/20190
+- name: Robotopia
+  number: 11
+  link: https://qoj.ac/problem/20191
+- name: Unusual Darts
+  number: 12
+  link: https://qoj.ac/problem/20192

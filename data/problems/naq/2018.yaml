@@ -1,0 +1,39 @@
+- name: Bingo Ties
+  number: 1
+  link: https://qoj.ac/problem/20206
+- name: Das Blinkenlights
+  number: 2
+  link: https://qoj.ac/problem/20207
+- name: Ebony and Ivory
+  number: 3
+  link: https://qoj.ac/problem/20208
+- name: Froggie
+  number: 4
+  link: https://qoj.ac/problem/20209
+- name: Fruit Slicer
+  number: 5
+  link: https://qoj.ac/problem/20210
+- name: LCM Tree
+  number: 6
+  link: https://qoj.ac/problem/20211
+- name: Left and Right
+  number: 7
+  link: https://qoj.ac/problem/20212
+- name: Longest Life
+  number: 8
+  link: https://qoj.ac/problem/20213
+- name: Monitoring Ski Paths
+  number: 9
+  link: https://qoj.ac/problem/20214
+- name: Peg Game for Two
+  number: 10
+  link: https://qoj.ac/problem/20215
+- name: Run-Length Encoding, Run!
+  number: 11
+  link: https://qoj.ac/problem/20216
+- name: Superdoku
+  number: 12
+  link: https://qoj.ac/problem/20217
+- name: Triangular Clouds
+  number: 13
+  link: https://qoj.ac/problem/20218

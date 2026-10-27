@@ -5,7 +5,7 @@ import nodemailer from 'nodemailer';
 
 export const Olympiads = new Set([
   'apio', 'bkoi', 'boi', 'ceoi',
-  'coi', 'egoi', 'ejoi', 'gks', 'gcpc', 'ncpc', 'nwerc',
+  'coi', 'egoi', 'ejoi', 'gks', 'gcpc', 'ncpc', 'nwerc', 'naq',
   'inoi', 'ioi', 'ioitc', 'izho',
   'joifr', 'joioc', 'joisc', 'noifinal',
   'noiprelim', 'noiqual', 'noisel', 'poi', 'rmi',

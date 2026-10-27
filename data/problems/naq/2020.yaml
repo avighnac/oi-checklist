@@ -1,0 +1,24 @@
+- name: Eight Queens
+  number: 1
+  link: https://qoj.ac/problem/20159
+- name: Flexible Spaces
+  number: 2
+  link: https://qoj.ac/problem/20161
+- name: Cantina of Babel
+  number: 3
+  link: https://qoj.ac/problem/20172
+- name: Simon Says
+  number: 4
+  link: https://qoj.ac/problem/20178
+- name: Drawing Circles
+  number: 5
+  link: https://qoj.ac/problem/20232
+- name: Perfect Path Patrol
+  number: 6
+  link: https://qoj.ac/problem/20233
+- name: Sky's the Limit
+  number: 7
+  link: https://qoj.ac/problem/20234
+- name: Using Digits
+  number: 8
+  link: https://qoj.ac/problem/20235
