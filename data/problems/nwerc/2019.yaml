@@ -1,0 +1,33 @@
+- name: Average Rank
+  number: 1
+  link: https://qoj.ac/problem/2410
+- name: Balanced Cut
+  number: 2
+  link: https://qoj.ac/problem/2411
+- name: Canvas Line
+  number: 3
+  link: https://qoj.ac/problem/2412
+- name: Disposable Switches
+  number: 4
+  link: https://qoj.ac/problem/2413
+- name: Expeditious Cubing
+  number: 5
+  link: https://qoj.ac/problem/2414
+- name: Firetrucks Are Red
+  number: 6
+  link: https://qoj.ac/problem/2415
+- name: Gnoll Hypothesis
+  number: 7
+  link: https://qoj.ac/problem/2416
+- name: Height Profile
+  number: 8
+  link: https://qoj.ac/problem/2417
+- name: Inverted Deck
+  number: 9
+  link: https://qoj.ac/problem/2418
+- name: Jackdaws And Crows
+  number: 10
+  link: https://qoj.ac/problem/2419
+- name: Kitesurfing
+  number: 11
+  link: https://qoj.ac/problem/2420

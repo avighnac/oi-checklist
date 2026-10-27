@@ -1,0 +1,33 @@
+- name: Around the Track
+  number: 1
+  link: https://qoj.ac/problem/3184
+- name: Biking Duck
+  number: 2
+  link: https://qoj.ac/problem/3185
+- name: Cent Savings
+  number: 3
+  link: https://qoj.ac/problem/3186
+- name: Digi Comp II
+  number: 4
+  link: https://qoj.ac/problem/3187
+- name: Euclidean TSP
+  number: 5
+  link: https://qoj.ac/problem/3188
+- name: Finding Lines
+  number: 6
+  link: https://qoj.ac/problem/3189
+- name: Gathering
+  number: 7
+  link: https://qoj.ac/problem/3190
+- name: Hyacinth
+  number: 8
+  link: https://qoj.ac/problem/3191
+- name: Indoorienteering
+  number: 9
+  link: https://qoj.ac/problem/3192
+- name: Judging Troubles
+  number: 10
+  link: https://qoj.ac/problem/3193
+- name: Knapsack Collection
+  number: 11
+  link: https://qoj.ac/problem/3194

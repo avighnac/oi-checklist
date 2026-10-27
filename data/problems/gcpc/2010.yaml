@@ -1,0 +1,33 @@
+- name: Absurd prices
+  number: 1
+  link: https://qoj.ac/problem/19107
+- name: Cheating or Not
+  number: 2
+  link: https://qoj.ac/problem/19108
+- name: Counterattack
+  number: 3
+  link: https://qoj.ac/problem/19109
+- name: Field Plan
+  number: 4
+  link: https://qoj.ac/problem/19110
+- name: Hacking
+  number: 5
+  link: https://qoj.ac/problem/19111
+- name: Last Minute Constructions
+  number: 6
+  link: https://qoj.ac/problem/19112
+- name: Lineup
+  number: 7
+  link: https://qoj.ac/problem/19113
+- name: Polynomial Estimates
+  number: 8
+  link: https://qoj.ac/problem/19114
+- name: Soccer Bets
+  number: 9
+  link: https://qoj.ac/problem/19115
+- name: The Two-ball Game
+  number: 10
+  link: https://qoj.ac/problem/19116
+- name: To score or not to score
+  number: 11
+  link: https://qoj.ac/problem/19117

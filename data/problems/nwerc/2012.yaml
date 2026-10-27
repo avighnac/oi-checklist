@@ -1,0 +1,33 @@
+- name: Admiral
+  number: 1
+  link: https://qoj.ac/problem/3564
+- name: Beer Pressure
+  number: 2
+  link: https://qoj.ac/problem/3565
+- name: Cycling
+  number: 3
+  link: https://qoj.ac/problem/3566
+- name: Digital Clock
+  number: 4
+  link: https://qoj.ac/problem/3567
+- name: Edge Case
+  number: 5
+  link: https://qoj.ac/problem/3568
+- name: Foul Play
+  number: 6
+  link: https://qoj.ac/problem/3569
+- name: Guards
+  number: 7
+  link: https://qoj.ac/problem/3570
+- name: Hip To Be Square
+  number: 8
+  link: https://qoj.ac/problem/3571
+- name: Idol
+  number: 9
+  link: https://qoj.ac/problem/3572
+- name: Joint Venture
+  number: 10
+  link: https://qoj.ac/problem/3573
+- name: Key Insight
+  number: 11
+  link: https://qoj.ac/problem/3574

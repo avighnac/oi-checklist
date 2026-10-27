@@ -1,0 +1,33 @@
+- name: Amanda Lounges
+  number: 1
+  link: https://qoj.ac/problem/16033
+- name: Basin City Surveillance
+  number: 2
+  link: https://qoj.ac/problem/16034
+- name: Catalan Square
+  number: 3
+  link: https://qoj.ac/problem/16035
+- name: Dice Game
+  number: 4
+  link: https://qoj.ac/problem/16036
+- name: Opening Ceremony
+  number: 5
+  link: https://qoj.ac/problem/16037
+- name: Particle Swapping
+  number: 6
+  link: https://qoj.ac/problem/16038
+- name: Outing
+  number: 7
+  link: https://qoj.ac/problem/16039
+- name: Clock Pictures
+  number: 8
+  link: https://qoj.ac/problem/16040
+- name: How many squares?
+  number: 9
+  link: https://qoj.ac/problem/16041
+- name: Road Work
+  number: 10
+  link: https://qoj.ac/problem/16042
+- name: Train Passengers
+  number: 11
+  link: https://qoj.ac/problem/16043

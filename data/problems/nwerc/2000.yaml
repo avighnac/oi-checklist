@@ -1,0 +1,24 @@
+- name: Railroads
+  number: 1
+  link: https://qoj.ac/problem/19695
+- name: Ouroboros Snake
+  number: 2
+  link: https://qoj.ac/problem/19696
+- name: Vito's Family
+  number: 3
+  link: https://qoj.ac/problem/19697
+- name: Smith Numbers
+  number: 4
+  link: https://qoj.ac/problem/19698
+- name: Chainsaw Massacre
+  number: 5
+  link: https://qoj.ac/problem/19699
+- name: Erdős Numbers
+  number: 6
+  link: https://qoj.ac/problem/19700
+- name: Echo
+  number: 7
+  link: https://qoj.ac/problem/19701
+- name: Fold-up Patterns
+  number: 8
+  link: https://qoj.ac/problem/19702

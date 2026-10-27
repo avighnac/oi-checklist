@@ -1,0 +1,24 @@
+- name: Arrows
+  number: 1
+  link: https://qoj.ac/problem/19671
+- name: MDST-machine
+  number: 2
+  link: https://qoj.ac/problem/19672
+- name: Entropy
+  number: 3
+  link: https://qoj.ac/problem/19673
+- name: Columns
+  number: 4
+  link: https://qoj.ac/problem/19674
+- name: Internet
+  number: 5
+  link: https://qoj.ac/problem/19675
+- name: Gardener
+  number: 6
+  link: https://qoj.ac/problem/19676
+- name: Mendel
+  number: 7
+  link: https://qoj.ac/problem/19677
+- name: Hall of Flames
+  number: 8
+  link: https://qoj.ac/problem/19678

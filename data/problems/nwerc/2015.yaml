@@ -1,0 +1,33 @@
+- name: Assigning Workstations
+  number: 1
+  link: https://qoj.ac/problem/3104
+- name: Better Productivity
+  number: 2
+  link: https://qoj.ac/problem/3105
+- name: Cleaning Pipes
+  number: 3
+  link: https://qoj.ac/problem/3106
+- name: Debugging
+  number: 4
+  link: https://qoj.ac/problem/3107
+- name: Elementary Math
+  number: 5
+  link: https://qoj.ac/problem/3108
+- name: Flight Plan Evaluation
+  number: 6
+  link: https://qoj.ac/problem/3109
+- name: Guessing Camels
+  number: 7
+  link: https://qoj.ac/problem/3110
+- name: Hole in One
+  number: 8
+  link: https://qoj.ac/problem/3111
+- name: Identifying Map Tiles
+  number: 9
+  link: https://qoj.ac/problem/3112
+- name: Jumbled Communication
+  number: 10
+  link: https://qoj.ac/problem/3113
+- name: Kitchen Combinatorics
+  number: 11
+  link: https://qoj.ac/problem/3114

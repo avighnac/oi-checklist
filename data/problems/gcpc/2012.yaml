@@ -1,0 +1,33 @@
+- name: Battleship
+  number: 1
+  link: https://qoj.ac/problem/19128
+- name: BrainFuckVM
+  number: 2
+  link: https://qoj.ac/problem/19129
+- name: Candy Distribution
+  number: 3
+  link: https://qoj.ac/problem/19130
+- name: Outsourcing
+  number: 4
+  link: https://qoj.ac/problem/19131
+- name: Pizza Hawaii
+  number: 5
+  link: https://qoj.ac/problem/19132
+- name: Roller coaster fun
+  number: 6
+  link: https://qoj.ac/problem/19133
+- name: Ski Jumping
+  number: 7
+  link: https://qoj.ac/problem/19134
+- name: Suffix Array Re-construction
+  number: 8
+  link: https://qoj.ac/problem/19135
+- name: Touchscreen Keyboard
+  number: 9
+  link: https://qoj.ac/problem/19136
+- name: Track Smoothing
+  number: 10
+  link: https://qoj.ac/problem/19137
+- name: Treasure Diving
+  number: 11
+  link: https://qoj.ac/problem/19138

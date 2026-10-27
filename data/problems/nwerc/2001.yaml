@@ -1,0 +1,24 @@
+- name: Area
+  number: 1
+  link: https://qoj.ac/problem/19703
+- name: Ambiguous Dates
+  number: 2
+  link: https://qoj.ac/problem/19704
+- name: Cube
+  number: 3
+  link: https://qoj.ac/problem/19705
+- name: Enigma
+  number: 4
+  link: https://qoj.ac/problem/19706
+- name: Gridland
+  number: 5
+  link: https://qoj.ac/problem/19707
+- name: T9
+  number: 6
+  link: https://qoj.ac/problem/19708
+- name: Number Game
+  number: 7
+  link: https://qoj.ac/problem/19709
+- name: Signal Box
+  number: 8
+  link: https://qoj.ac/problem/19710

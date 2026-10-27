@@ -1,0 +1,33 @@
+- name: Ascending Photo
+  number: 1
+  link: https://qoj.ac/problem/2632
+- name: Boss Battle
+  number: 2
+  link: https://qoj.ac/problem/2633
+- name: Connect the Dots
+  number: 3
+  link: https://qoj.ac/problem/2634
+- name: Dunglish
+  number: 4
+  link: https://qoj.ac/problem/2635
+- name: English Restaurant
+  number: 5
+  link: https://qoj.ac/problem/2636
+- name: Factor-Free Tree
+  number: 6
+  link: https://qoj.ac/problem/2637
+- name: Glyph Recognition
+  number: 7
+  link: https://qoj.ac/problem/2638
+- name: High Score
+  number: 8
+  link: https://qoj.ac/problem/2639
+- name: Installing Apps
+  number: 9
+  link: https://qoj.ac/problem/2640
+- name: Juggling Troupe
+  number: 10
+  link: https://qoj.ac/problem/2641
+- name: Knockout Tournament
+  number: 11
+  link: https://qoj.ac/problem/2642

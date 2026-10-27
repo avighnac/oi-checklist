@@ -1,0 +1,33 @@
+- name: Arranging Hat
+  number: 1
+  link: https://qoj.ac/problem/2682
+- name: British Menu
+  number: 2
+  link: https://qoj.ac/problem/2683
+- name: Careful Ascent
+  number: 3
+  link: https://qoj.ac/problem/2684
+- name: Driving in Optimistan
+  number: 4
+  link: https://qoj.ac/problem/2685
+- name: Exam Redistribution
+  number: 5
+  link: https://qoj.ac/problem/2686
+- name: Free Weights
+  number: 6
+  link: https://qoj.ac/problem/2687
+- name: Gotta Nudge 'Em All
+  number: 7
+  link: https://qoj.ac/problem/2688
+- name: Hamiltonian Hypercube
+  number: 8
+  link: https://qoj.ac/problem/2689
+- name: Iron and Coal
+  number: 9
+  link: https://qoj.ac/problem/2690
+- name: Jupiter Orbiter
+  number: 10
+  link: https://qoj.ac/problem/2691
+- name: Kiwi Trees
+  number: 11
+  link: https://qoj.ac/problem/2692

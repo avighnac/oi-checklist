@@ -1,0 +1,39 @@
+- name: Big Brother
+  number: 1
+  link: https://qoj.ac/problem/876
+- name: Dams in Distress
+  number: 2
+  link: https://qoj.ac/problem/878
+- name: Exhaustive Experiment
+  number: 3
+  link: https://qoj.ac/problem/879
+- name: Film Critics
+  number: 4
+  link: https://qoj.ac/problem/880
+- name: Gig Combinatorics
+  number: 5
+  link: https://qoj.ac/problem/881
+- name: Hiring and Firing
+  number: 6
+  link: https://qoj.ac/problem/882
+- name: Infection Estimation
+  number: 7
+  link: https://qoj.ac/problem/883
+- name: Keep Calm And Carry Off
+  number: 8
+  link: https://qoj.ac/problem/885
+- name: Languages
+  number: 9
+  link: https://qoj.ac/problem/886
+- name: Array of Discord
+  number: 10
+  link: https://qoj.ac/problem/3322
+- name: Coin Stacks
+  number: 11
+  link: https://qoj.ac/problem/3323
+- name: Joining Flows
+  number: 12
+  link: https://qoj.ac/problem/3324
+- name: Methodic Multiplication
+  number: 13
+  link: https://qoj.ac/problem/3325

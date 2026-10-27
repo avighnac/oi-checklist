@@ -1,0 +1,27 @@
+- name: Sudoku
+  number: 1
+  link: https://qoj.ac/problem/19745
+- name: The SetStack Computer
+  number: 2
+  link: https://qoj.ac/problem/19746
+- name: Pie
+  number: 3
+  link: https://qoj.ac/problem/19747
+- name: Ticket to Ride
+  number: 4
+  link: https://qoj.ac/problem/19748
+- name: The Bookcase
+  number: 5
+  link: https://qoj.ac/problem/19749
+- name: Printer Queue
+  number: 6
+  link: https://qoj.ac/problem/19750
+- name: Prime Path
+  number: 7
+  link: https://qoj.ac/problem/19751
+- name: Lineland's Airport
+  number: 8
+  link: https://qoj.ac/problem/19752
+- name: Leonardo's Notebook
+  number: 9
+  link: https://qoj.ac/problem/19753

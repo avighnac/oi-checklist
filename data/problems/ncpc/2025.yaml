@@ -1,0 +1,33 @@
+- name: Arithmetic Adaptation
+  number: 1
+  link: https://qoj.ac/problem/14827
+- name: Bohemian Bookshelf
+  number: 2
+  link: https://qoj.ac/problem/14828
+- name: Crochet Competition
+  number: 3
+  link: https://qoj.ac/problem/14829
+- name: Dune Dash
+  number: 4
+  link: https://qoj.ac/problem/14830
+- name: Egyptian Equality
+  number: 5
+  link: https://qoj.ac/problem/14831
+- name: Follower Forensics
+  number: 6
+  link: https://qoj.ac/problem/14832
+- name: Gotta Trade Some of 'Em
+  number: 7
+  link: https://qoj.ac/problem/14833
+- name: Hidden Permutation
+  number: 8
+  link: https://qoj.ac/problem/14834
+- name: Instagraph
+  number: 9
+  link: https://qoj.ac/problem/14835
+- name: Jump
+  number: 10
+  link: https://qoj.ac/problem/14836
+- name: km/h
+  number: 11
+  link: https://qoj.ac/problem/14837

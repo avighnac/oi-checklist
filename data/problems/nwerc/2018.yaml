@@ -1,0 +1,33 @@
+- name: Access Points
+  number: 1
+  link: https://qoj.ac/problem/1290
+- name: Brexit Negotiations
+  number: 2
+  link: https://qoj.ac/problem/1291
+- name: Circuit Board Design
+  number: 3
+  link: https://qoj.ac/problem/1292
+- name: Date Pickup
+  number: 4
+  link: https://qoj.ac/problem/1293
+- name: Equality Control
+  number: 5
+  link: https://qoj.ac/problem/1294
+- name: Fastest Speedrun
+  number: 6
+  link: https://qoj.ac/problem/1295
+- name: Game Design
+  number: 7
+  link: https://qoj.ac/problem/1296
+- name: Hard Drive
+  number: 8
+  link: https://qoj.ac/problem/1297
+- name: Inflation
+  number: 9
+  link: https://qoj.ac/problem/1298
+- name: Jinxed Betting
+  number: 10
+  link: https://qoj.ac/problem/1299
+- name: Kleptography
+  number: 11
+  link: https://qoj.ac/problem/1300

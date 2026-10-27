@@ -1,0 +1,24 @@
+- name: Burger
+  number: 1
+  link: https://qoj.ac/problem/19663
+- name: Wormholes
+  number: 2
+  link: https://qoj.ac/problem/19664
+- name: Squares
+  number: 3
+  link: https://qoj.ac/problem/19665
+- name: Magic
+  number: 4
+  link: https://qoj.ac/problem/19666
+- name: Jackpot
+  number: 5
+  link: https://qoj.ac/problem/19667
+- name: Dividing coins
+  number: 6
+  link: https://qoj.ac/problem/19668
+- name: Crimewave
+  number: 7
+  link: https://qoj.ac/problem/19669
+- name: Gaston
+  number: 8
+  link: https://qoj.ac/problem/19670

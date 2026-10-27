@@ -1,0 +1,24 @@
+- name: Bridging signals
+  number: 1
+  link: https://qoj.ac/problem/19719
+- name: Vase collection
+  number: 2
+  link: https://qoj.ac/problem/19720
+- name: Gladiators
+  number: 3
+  link: https://qoj.ac/problem/19721
+- name: Who's the boss?
+  number: 4
+  link: https://qoj.ac/problem/19722
+- name: Subway tree systems
+  number: 5
+  link: https://qoj.ac/problem/19723
+- name: Prison rearrangement
+  number: 6
+  link: https://qoj.ac/problem/19724
+- name: Sightseeing tour
+  number: 7
+  link: https://qoj.ac/problem/19725
+- name: A number game
+  number: 8
+  link: https://qoj.ac/problem/19726

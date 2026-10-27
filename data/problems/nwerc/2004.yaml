@@ -1,0 +1,27 @@
+- name: Word Encoding
+  number: 1
+  link: https://qoj.ac/problem/19727
+- name: Watchdog
+  number: 2
+  link: https://qoj.ac/problem/19728
+- name: Taxi Cab Scheme
+  number: 3
+  link: https://qoj.ac/problem/19729
+- name: Pseudo-random Numbers
+  number: 4
+  link: https://qoj.ac/problem/19730
+- name: Card Game Cheater
+  number: 5
+  link: https://qoj.ac/problem/19731
+- name: Investment
+  number: 6
+  link: https://qoj.ac/problem/19732
+- name: Pipes
+  number: 7
+  link: https://qoj.ac/problem/19733
+- name: SETI
+  number: 8
+  link: https://qoj.ac/problem/19734
+- name: Minimax Triangulation
+  number: 9
+  link: https://qoj.ac/problem/19735

@@ -995,12 +995,21 @@ async function loadProblems(from) {
         }
       }
     } else {
-      const row = document.createElement('tr');
+      let row = document.createElement('tr');
       const yearCell = document.createElement('td');
       yearCell.className = 'year-cell';
       yearCell.textContent = `${prefix} ${year}`;
+      const wrapRows = ['GCPC', 'NCPC', 'NWERC'].includes(from);
+      const rowProblems = wrapRows
+        ? [...problems].sort((a, b) => a.number - b.number)
+        : problems;
+      if (wrapRows) yearCell.rowSpan = Math.ceil(rowProblems.length / 5);
       row.appendChild(yearCell);
-      for (const problem of problems) {
+      for (const [index, problem] of rowProblems.entries()) {
+        if (wrapRows && index > 0 && index % 5 === 0) {
+          tbody.appendChild(row);
+          row = document.createElement('tr');
+        }
         const cell = document.createElement('td');
         cell.className = 'problem-cell';
         const statusValue = Number.isFinite(problem.status)
@@ -1192,9 +1201,17 @@ document.addEventListener('DOMContentLoaded', async () => {
       body: JSON.stringify(body),
     });
     if (resp.ok) {
-      const { olympiadOrder, ascSort, platformPref } = await resp.json();
+      const { olympiadOrder, hiddenOlympiads, ascSort, platformPref } = await resp.json();
       if (Array.isArray(olympiadOrder)) {
         sources = olympiadOrder.map((id) => id.toUpperCase());
+        for (const source of ['GCPC', 'NCPC', 'NWERC']) {
+          if (!sources.includes(source) && !hiddenOlympiads?.includes(source.toLowerCase())) {
+            sources.push(source);
+          }
+        }
+      }
+      if (Array.isArray(hiddenOlympiads)) {
+        sources = sources.filter((source) => !hiddenOlympiads.includes(source.toLowerCase()));
       }
       if (typeof ascSort === 'boolean') {
         yearSortOrder = ascSort ? 'asc' : 'desc';

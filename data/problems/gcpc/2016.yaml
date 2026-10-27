@@ -1,0 +1,36 @@
+- name: Dwarves
+  number: 1
+  link: https://qoj.ac/problem/19172
+- name: Correcting Cheeseburgers
+  number: 2
+  link: https://qoj.ac/problem/19173
+- name: Knapsack in a Globalized World
+  number: 3
+  link: https://qoj.ac/problem/19174
+- name: Matrix Cypher
+  number: 4
+  link: https://qoj.ac/problem/19175
+- name: Model Railroad
+  number: 5
+  link: https://qoj.ac/problem/19176
+- name: One-Way Roads
+  number: 6
+  link: https://qoj.ac/problem/19177
+- name: Formula
+  number: 7
+  link: https://qoj.ac/problem/19178
+- name: Celestial Map
+  number: 8
+  link: https://qoj.ac/problem/19179
+- name: Common Knowledge
+  number: 9
+  link: https://qoj.ac/problem/19180
+- name: Selling CPUs
+  number: 10
+  link: https://qoj.ac/problem/19181
+- name: Routing
+  number: 11
+  link: https://qoj.ac/problem/19182
+- name: Maze
+  number: 12
+  link: https://qoj.ac/problem/19183

@@ -1,0 +1,30 @@
+- name: Binomial coefficients
+  number: 1
+  link: https://qoj.ac/problem/4770
+- name: Bird tree
+  number: 2
+  link: https://qoj.ac/problem/4771
+- name: Movie collection
+  number: 3
+  link: https://qoj.ac/problem/4772
+- name: Piece it together
+  number: 4
+  link: https://qoj.ac/problem/4773
+- name: Please, go first
+  number: 5
+  link: https://qoj.ac/problem/4774
+- name: Pool construction
+  number: 6
+  link: https://qoj.ac/problem/4775
+- name: Smoking gun
+  number: 7
+  link: https://qoj.ac/problem/4776
+- name: Tichu
+  number: 8
+  link: https://qoj.ac/problem/4777
+- name: Tracking RFIDs
+  number: 9
+  link: https://qoj.ac/problem/4778
+- name: Train delays
+  number: 10
+  link: https://qoj.ac/problem/4779

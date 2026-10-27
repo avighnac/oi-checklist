@@ -29,8 +29,8 @@ window.onload = async () => {
     if (data.olympiadOrder && Array.isArray(data.olympiadOrder)) {
       applyOlympiadOrder(data.olympiadOrder);
     }
-    if (data.hidden && Array.isArray(data.hidden)) {
-      applyHiddenOlympiads(data.hidden);
+    if (Array.isArray(data.hiddenOlympiads)) {
+      applyHiddenOlympiads(data.hiddenOlympiads);
     }
     if (typeof data.ascSort === 'boolean') {
       localStorage.setItem('yearSortOrder', data.ascSort ? 'asc' : 'desc');
@@ -104,7 +104,7 @@ function saveOlympiadOrder() {
       token: sessionToken,
       updated: {
         olympiadOrder: order,
-        hidden,
+        hiddenOlympiads: hidden,
       },
     }),
   })

@@ -1,0 +1,30 @@
+- name: Absurdistan Roads
+  number: 1
+  link: https://qoj.ac/problem/3411
+- name: Battle for Silver
+  number: 2
+  link: https://qoj.ac/problem/3412
+- name: Card Trick
+  number: 3
+  link: https://qoj.ac/problem/3413
+- name: Diagrams & Tableaux
+  number: 4
+  link: https://qoj.ac/problem/3414
+- name: Exponential Towers
+  number: 5
+  link: https://qoj.ac/problem/3415
+- name: First Date
+  number: 6
+  link: https://qoj.ac/problem/3416
+- name: Grachten
+  number: 7
+  link: https://qoj.ac/problem/3417
+- name: Highway of the Future
+  number: 8
+  link: https://qoj.ac/problem/3418
+- name: Infix to Prefix
+  number: 9
+  link: https://qoj.ac/problem/3419
+- name: Jingle Balls
+  number: 10
+  link: https://qoj.ac/problem/3420

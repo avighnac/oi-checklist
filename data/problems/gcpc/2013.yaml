@@ -1,0 +1,33 @@
+- name: Boggle
+  number: 1
+  link: https://qoj.ac/problem/19139
+- name: Booking
+  number: 2
+  link: https://qoj.ac/problem/19140
+- name: Chess
+  number: 3
+  link: https://qoj.ac/problem/19141
+- name: Kastenlauf
+  number: 4
+  link: https://qoj.ac/problem/19142
+- name: No Trees But Flowers
+  number: 5
+  link: https://qoj.ac/problem/19143
+- name: Peg Solitaire
+  number: 6
+  link: https://qoj.ac/problem/19144
+- name: Ringworld
+  number: 7
+  link: https://qoj.ac/problem/19145
+- name: The King of the North
+  number: 8
+  link: https://qoj.ac/problem/19146
+- name: Ticket Draw
+  number: 9
+  link: https://qoj.ac/problem/19147
+- name: Timing
+  number: 10
+  link: https://qoj.ac/problem/19148
+- name: Triangles
+  number: 11
+  link: https://qoj.ac/problem/19149

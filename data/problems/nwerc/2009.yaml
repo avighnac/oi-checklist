@@ -1,0 +1,30 @@
+- name: An Industrial Spy
+  number: 1
+  link: https://qoj.ac/problem/16065
+- name: Common Subexpression Elimination
+  number: 2
+  link: https://qoj.ac/problem/16066
+- name: Divisible Subsequences
+  number: 3
+  link: https://qoj.ac/problem/16067
+- name: Fractal
+  number: 4
+  link: https://qoj.ac/problem/16068
+- name: Mountain Road
+  number: 5
+  link: https://qoj.ac/problem/16069
+- name: Moving to Nuremberg
+  number: 6
+  link: https://qoj.ac/problem/16070
+- name: Room Assignments
+  number: 7
+  link: https://qoj.ac/problem/16071
+- name: Settlers of Catan
+  number: 8
+  link: https://qoj.ac/problem/16072
+- name: Simple Polygon
+  number: 9
+  link: https://qoj.ac/problem/16073
+- name: Wormholes
+  number: 10
+  link: https://qoj.ac/problem/16074
