@@ -381,17 +381,9 @@ document.addEventListener('DOMContentLoaded', async () => {
       contestProblems.forEach((prob, index) => {
         const olympiadProblems = problemsData[prob.source];
         if (olympiadProblems && olympiadProblems[prob.year]) {
-          const problem2 = olympiadProblems[prob.year].find((p) => {
-            const basicMatch = p.year === prob.year && p.number === prob.number;
-            if (
-              prob.source.toLowerCase().includes('usaco') &&
-              contestStage &&
-              p.extra
-            ) {
-              return basicMatch && p.extra === contestStage;
-            }
-            return basicMatch;
-          });
+          const problem2 = olympiadProblems[prob.year].find(
+            (p) => p.id === prob.problemId,
+          );
           if (problem2) {
             problemData.push({
               id: problem2.id,
@@ -696,7 +688,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     contest.problems.forEach((prob) => {
       const yearProblems = problemsData[selectedOlympiad][prob.year] || [];
       const problem2 = yearProblems.find(
-        (p) => p.year === prob.year && p.number === prob.number,
+        (p) => p.id === prob.problemId,
       );
       if (problem2) {
         if (problem2 && problem2.links && typeof problem2.links === 'object') {
@@ -767,7 +759,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       for (const prob of contest.problems) {
         const yearProblems = problemsData[selectedOlympiad][prob.year] || [];
         const problem2 = yearProblems.find(
-          (p) => p.year === prob.year && p.number === prob.number,
+          (p) => p.id === prob.problemId,
         );
         if (problem2) {
           let availablePlats = [];
@@ -1048,7 +1040,7 @@ document.addEventListener('DOMContentLoaded', async () => {
           contest.problems.forEach((prob) => {
             const yearProblems = problemsData[dataSource][prob.year] || [];
             const problem2 = yearProblems.find(
-              (p) => p.year === prob.year && p.number === prob.number,
+              (p) => p.id === prob.problemId,
             );
             if (problem2) {
               if (problem2.links && typeof problem2.links === 'object') {
@@ -1143,7 +1135,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         contest.problems.forEach((prob) => {
           const yearProblems = problemsData[dataSource][prob.year] || [];
           const problem2 = yearProblems.find(
-            (p) => p.year === prob.year && p.number === prob.number,
+            (p) => p.id === prob.problemId,
           );
           if (problem2) {
             if (problem2.links && typeof problem2.links === 'object') {
@@ -1269,7 +1261,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         for (const prob of contest.problems) {
           const yearProblems = problemsData[dataSource][prob.year] || [];
           const problem2 = yearProblems.find(
-            (p) => p.year === prob.year && p.number === prob.number,
+            (p) => p.id === prob.problemId,
           );
           if (problem2) {
             let availablePlats = [];
